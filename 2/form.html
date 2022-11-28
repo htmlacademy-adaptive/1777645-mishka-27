@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вязание на заказ</title>
+    <base href="https://htmlacademy-adaptive.github.io/1777645-mishka-27/2/">
+</head>
+
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="./img/logo/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">Новые поступления</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#!">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#!">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#!">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-container">
+      <section class="inner-header">
+        <div class="inner-header__wrapper">
+          <header>
+            <h1 class="inner-header__title title">Вязание на заказ</h1>
+          </header>
+        </div>
+      </section>
+      <section class="request">
+        <h2 class="visually-hidden">Форма заказа.</h2>
+        <p class="request__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="request__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="request__group">
+            <legend class="request__heading heading">Тип</legend>
+            <label class="request__text-option">
+              <input class="request__radio visually-hidden" type="radio" name="type" value="interior-accessory" checked>
+              Аксессуар для интерьера
+              <span class="mark-radio"></span>
+            </label>
+            <label class="request__text-option">
+              <input class="request__radio visually-hidden" type="radio" name="type" value="childrens-toy">
+              Детская игрушка
+              <span class="mark-radio"></span>
+            </label>
+          </fieldset>
+          <fieldset class="request__group">
+            <legend class="heading">Цвет</legend>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
+              <span class="mark-checkbox"></span>
+              Белый
+            </label>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="gray" checked>
+              <span class="mark-checkbox"></span>
+              Серый
+            </label>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="tiffany">
+              <span class="mark-checkbox"></span>
+              Тиффани
+            </label>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="black">
+              <span class="mark-checkbox"></span>
+              Черный
+            </label>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="pink">
+              <span class="mark-checkbox"></span>
+              Розовый
+            </label>
+            <label class="request__text-option">
+              <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="orange">
+              <span class="mark-checkbox"></span>
+              Оранжевый
+            </label>
+          </fieldset>
+          <fieldset class="request__group">
+            <legend class="">ФИО</legend>
+            <label class="request__text-option" for="first-name">Имя:</label>
+            <input class="request__field" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+            <label class="request__text-option" for="last-name">Фамилия:</label>
+            <input class="request__field" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
+            <label class="request__text-option" for="patronymic">Отчество:</label>
+            <input class="request__field" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+          </fieldset>
+          <label class="request__text-option" for="ph1one">Тел</label>
+          <input class="request__field request__field--icon-phone" type="text" id="ph1one" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          <label class="request__text-option" for="email">E-mail</label>
+          <input class="request__field request__field--icon-message" type="text" id="email" name="email" placeholder="Ваш Email*" required>
+          <label class="request__text-option" for="text">Доп</label>
+          <textarea class="request__field" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <span class="request_subtext">*Поля обязательны для заполнения</span>
+          <button class="request__button button" type="submit">Отправить заказ</button>
+        </form>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__logo" href="index.html">
+          <img class="main-footer__logo-image" src="./img/logo/logo-footer.svg" alt="Логотип сайта Мишка.">
+        </a>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">Youtube</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank">Telegram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <img class="copyright__logo-image" src="./img/logo/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>
