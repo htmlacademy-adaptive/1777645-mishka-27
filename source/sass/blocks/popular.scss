@@ -1,0 +1,49 @@
+@use "../global/variables.scss";
+
+.popular__subtitle {
+  margin: 0 0 5px;
+}
+
+.popular__signature {
+  margin: 0 0 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: variables.$moderate-aquamarine-1;
+}
+
+.popular__text {
+  margin: 0 0 21px;
+  font-size: 15px;
+  color: variables.$dark-bluish-black;
+}
+
+.popular__list {
+  margin: 0 0 28px;
+  font-size: 15px;
+  line-height: 20px;
+  color: variables.$dark-bluish-black;
+}
+
+.popular__item {
+  padding: 7px 0 12px;
+  display: grid;
+  grid-template-columns: 98px 162px;
+  border-bottom: 1px solid variables.$linen;
+}
+
+.popular__definition {
+  margin: 0;
+}
+
+.popular__image {
+  display: block;
+  margin: 0 0 26px;
+}
+
+.popular__price {
+  margin: 0 2px 24px 0;
+  font-weight: 700;
+  color: variables.$dark-bluish-black;
+  text-align: center;
+}
