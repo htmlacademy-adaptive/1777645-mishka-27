@@ -1,0 +1,52 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.contacts__wrapper {
+  margin: 0 0 62px;
+}
+
+.contacts__subtitle {
+  margin: 0 0 28px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: 78px 182px;
+}
+
+.contacts__definition {
+  margin: 0;
+}
+
+.contacts__link {
+  @include mixins.link-reset;
+  padding: 0 0 2px;
+  border-bottom: 1px solid variables.$moderate-aquamarine-2;
+
+  &:hover {
+    color: variables.$shamrock;
+    border-color: variables.$shamrock;
+  }
+
+  &:active {
+    color: variables.$shamrock;
+    border-color: rgba(variables.$shamrock, 0.1);
+  }
+}
+
+.contacts__map {
+  margin: 0 0 41px;
+}
+
+.contacts__write {
+  margin: 0 0 39px;
+}
