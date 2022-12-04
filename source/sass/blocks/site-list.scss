@@ -1,0 +1,12 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.site-list {
+  @include mixins.list-reset;
+  font-weight: 700;
+}
+
+.site-list__link {
+  @include mixins.link-reset;
+  @include mixins.link-behaviour;
+}
