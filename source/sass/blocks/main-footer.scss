@@ -1,0 +1,34 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.main-footer {
+  background-color: variables.$smoky-white;
+}
+
+.main-footer__logo {
+  display: none;
+  color: inherit;
+
+  &:hover {
+    color: variables.$shamrock;
+  }
+
+  &:active {
+    color: rgba(variables.$shamrock, 0.3);
+  }
+}
+
+.main-footer__social {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 -1px 0 0 variables.$platinum;
+}
+
+.main-footer__copyright {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
