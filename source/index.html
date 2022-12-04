@@ -223,26 +223,28 @@
         </div>
       </div>
     </footer>
-    <div class="modal-add-cart">
-      <section class="modal-add-cart__content">
-        <h2 class="modal-add-cart__title">Добавить в корзину</h2>
-        <p class="modal-add-cart__text">Выберите размер:</p>
-        <form class="modal-add-cart__form" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="modal-add-cart__text-option">
-            <input class="modal-add-cart__radio visually-hidden" type="radio" name="size" value="small" checked>
-            <span class="modal-mark-radio"></span>
-            s
-          </label>
-          <label class="modal-add-cart__text-option">
-            <input class="modal-add-cart__radio visually-hidden" type="radio" name="size" value="medium">
-            <span class="modal-mark-radio"></span>
-            m
-          </label>
-          <label class="modal-add-cart__text-option">
-            <input class="modal-add-cart__radio visually-hidden" type="radio" name="size" value="large">
-            <span class="modal-add-cart__mark-radio"></span>
-            l
-          </label>
+    <div class="modal-add">
+      <section class="modal-add__content">
+        <h2 class="modal-add__title">Добавить<br> в корзину</h2>
+        <p class="modal-add__text">Выберите размер:</p>
+        <form class="modal-add__form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="modal-add__radio-group">
+            <label class="modal-add__text-option">
+              <input class="modal-add__radio visually-hidden" type="radio" name="size" value="small" checked>
+              <span class="modal-add__mark-radio"></span>
+              s
+            </label>
+            <label class="modal-add__text-option">
+              <input class="modal-add__radio visually-hidden" type="radio" name="size" value="medium">
+              <span class="modal-add__mark-radio"></span>
+              m
+            </label>
+            <label class="modal-add__text-option">
+              <input class="modal-add__radio visually-hidden" type="radio" name="size" value="large">
+              <span class="modal-add__mark-radio"></span>
+              l
+            </label>
+          </div>
           <button class="modal-add__button button button--tag-button button--modal" type="submit">Добавить</button>
         </form>
       </section>

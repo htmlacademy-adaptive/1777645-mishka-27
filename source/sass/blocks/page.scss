@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .page {
   height: 100%;
   font-family: "Open Sans", sans-serif;
@@ -8,4 +10,5 @@
 .page__body {
   min-height: 100%;
   margin: 0;
+  color: variables.$dark-main;
 }
