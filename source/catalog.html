@@ -54,18 +54,14 @@
       </nav>
     </header>
     <main class="main-container">
-      <header class="inner-header">
-        <div class="inner-header__wrapper">
-          <h1 class="inner-header__title title">Каталог товаров</h1>
-          <p class="inner-header__text-signature">Бесплатная доставка по России</p>
-        </div>
-      </header>
+      <h1 class="main-container__title title">Каталог товаров</h1>
       <section class="catalog-products">
+        <h2 class="visually-hidden">Список товаров</h2>
         <div class="catalog-products__wrapper">
           <ul class="catalog-products__list">
-            <li class="catalog-products__item">
+            <li class="catalog-products__item product">
               <a class="product__link" href="#!">
-                <h2 class="title-small">Зайчик-попрыгайчик</h2>
+                <h3 class="title-product">Зайчик-попрыгайчик</h3>
               </a>
               <a class="product__link" href="#!">
                 <img class="product__image" src="./img/products/product-mobile-1.jpg" width="260" height="195" alt="Зайчик в синем костюме.">
@@ -76,9 +72,9 @@
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
             </li>
-            <li class="catalog-products__item">
+            <li class="catalog-products__item product">
               <a class="product__link" href="#!">
-                <h2 class="title-small">Корзинка для белья</h2>
+                <h3 class="title-product">Корзинка для белья</h3>
               </a>
               <a class="product__link" href="#!">
                 <img class="product__image" src="./img/products/product-mobile-2.jpg" alt="Бело-оранжевая корзинка.">
@@ -89,9 +85,9 @@
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
             </li>
-            <li class="catalog-products__item">
+            <li class="catalog-products__item product">
               <a class="product__link" href="#!">
-                <h2 class="title-small">Большая корзинкадля игрушек</h2>
+                <h3 class="title-product">Большая корзинкадля игрушек</h3>
               </a>
               <a class="product__link" href="#!">
                 <img class="product__image" src="./img/products/product-mobile-3.jpg" alt="Бело-зеленая корзинка.">
@@ -109,17 +105,13 @@
         <div class="production__wrapper">
           <h2 class="production__title">Процесс производства</h2>
           <div class="production__player player">
-            <video class="player__video" width="260" height="150" controls poster="./img/poster.jpg">
-              <source src="#" type="video/mp4">
-              <source src="#" type="video/ogg">
-              <source src="#" type="video/webm">
-            </video>
+            <img class="player__poster" src="./img/poster.jpg" width="260" height="150" alt="Корзинка бирюзово-белая.">
             <button class="player__button" type="button">
               <span class="visually-hidden">Воспроизвести видео</span>
             </button>
           </div>
           <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="production__button button">Сделать заказ</button>
+          <button class="production__button button button--tag-button">Сделать заказ</button>
         </div>
       </section>
     </main>
