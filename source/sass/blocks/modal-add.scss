@@ -73,13 +73,15 @@
 }
 
 .modal-add__radio {
-  &:checked + .modal-add__mark-radio::after {
-    position: absolute;
-    content: "";
-    top: -2px;
-    left: -2px;
-    width: 82px;
-    height: 52px;
-    border: 2px solid variables.$moderate-aquamarine-1;
+  &:checked + .modal-add__mark-radio {
+    &::after {
+      position: absolute;
+      content: "";
+      top: -2px;
+      left: -2px;
+      width: 82px;
+      height: 52px;
+      border: 2px solid variables.$moderate-aquamarine-1;
+    }
   }
 }
