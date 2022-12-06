@@ -20,6 +20,10 @@
     cursor: pointer;
   }
 
+  &--spacing {
+    letter-spacing: -1px;
+  }
+
   &:hover {
     background-color: variables.$dark-bluish-black;
     color: variables.$light-main;
