@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+
+.main-container__title {
+  padding: 74px 0;
+  background-color: variables.$smoky-white;
+  text-align: center;
+}
