@@ -6,11 +6,11 @@
   flex-direction: column;
 
   &:hover .product__group-info {
-    box-shadow: variables.$box-shadow-3;
+    box-shadow: variables.$shadow-border, variables.$box-shadow-3;
   }
 
   &:active .product__group-info {
-    box-shadow: variables.$box-shadow-1;
+    box-shadow: variables.$shadow-border, variables.$box-shadow-1;
   }
 }
 

@@ -1,9 +1,5 @@
 @use "../global/mixins.scss";
 
-.catalog-products__wrapper {
-  padding: 30px 0 0;
-}
-
 .catalog-products__list {
   @include mixins.list-reset;
   display: flex;
