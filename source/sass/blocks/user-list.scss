@@ -1,0 +1,24 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.user-list {
+  @include mixins.list-reset;
+  font-weight: 700;
+}
+
+.user-list__icon {
+  color: rgba(variables.$dark-main, 0.2);
+}
+
+.user-list__link {
+  @include mixins.link-reset;
+  @include mixins.link-behaviour;
+
+  &:hover .user-list__icon {
+    color: variables.$moderate-aquamarine-1;
+  }
+
+  &:active .user-list__icon {
+    color: rgba(variables.$moderate-aquamarine-1, 0.3);
+  }
+}

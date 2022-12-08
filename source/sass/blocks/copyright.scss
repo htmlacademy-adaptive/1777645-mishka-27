@@ -1,0 +1,28 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.copyright__text {
+  margin: 0 28px 2px 1px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.copyright__link {
+  @include mixins.link-reset;
+  display: flex;
+  align-items: center;
+
+  &:hover .copyright__logo-icon {
+    color: variables.$shamrock;
+  }
+
+  &:active .copyright__logo-icon {
+    color: rgba(variables.$shamrock, 0.3);
+  }
+}
+
+.copyright__logo-icon {
+  display: block;
+  color: variables.$moderate-aquamarine-1;
+}

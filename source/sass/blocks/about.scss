@@ -1,0 +1,7 @@
+@use "../global/mixins.scss";
+
+.about__list {
+  @include mixins.list-reset;
+  font-weight: 700;
+  line-height: 20px;
+}

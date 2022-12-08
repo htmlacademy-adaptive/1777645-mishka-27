@@ -1,0 +1,20 @@
+.map {
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: hidden;
+}
+
+.map__map-image {
+  display: block;
+  height: 454px;
+  object-fit: cover;
+  grid-area: 1/1/-1/-1;
+  justify-self: center;
+}
+
+.map__google {
+  height: 454px;
+  width: 100%;
+  border: none;
+  grid-area: 1/1/-1/-1;
+}

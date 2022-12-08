@@ -1,0 +1,28 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.social__list {
+  @include mixins.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 27px;
+  margin-bottom: 2px;
+  width: 142px;
+}
+
+.social__link {
+  @include mixins.link-reset;
+
+  &:hover .social__icon {
+    color: variables.$shamrock;
+  }
+
+  &:active .social__icon {
+    color: rgba(variables.$shamrock, 0.3);
+  }
+}
+
+.social__icon {
+  display: block;
+  color: variables.$black-brown;
+}

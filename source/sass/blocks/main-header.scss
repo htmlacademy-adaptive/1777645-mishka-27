@@ -1,0 +1,35 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 22px 0;
+  box-shadow: 0 1px 0 0 variables.$linen;
+}
+
+.main-header__logo {
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__logo-image {
+  display: block;
+}
+
+.main-nav__text-info {
+  margin: 0;
+  font-size: 15px;
+  color: variables.$dark-bluish-black;
+}
