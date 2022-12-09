@@ -13,11 +13,6 @@
 
   &--icon {
     padding-right: 38px;
-
-    &:hover + .request__icon-input,
-    &:focus + .request__icon-input {
-      color: variables.$moderate-aquamarine-2;
-    }
   }
 
   &:hover {
