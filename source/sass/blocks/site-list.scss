@@ -6,17 +6,29 @@
   font-weight: 700;
 
   @media (min-width: variables.$width-tablet) {
+    position: absolute;
+    bottom: -66px;
+    left: 50px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    
-    display: none; // временно
+    font-size: 15px;
   }
 }
 
-// .site-list__item {} // временно
+.site-list__item {
+  &:first-child .site-list__link {
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
 
 .site-list__link {
   @include mixins.link-reset;
   @include mixins.link-behaviour;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 21px 18px;
+  }
 }

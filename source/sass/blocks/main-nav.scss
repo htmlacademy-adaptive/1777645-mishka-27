@@ -36,6 +36,9 @@
   color: variables.$dark-bluish-black;
 
   @media (min-width: variables.$width-tablet) {
-    // display: block; // временно
+    display: block;
+    position: absolute;
+    bottom: -44px;
+    right: 50px;
   }
 }
