@@ -8,6 +8,11 @@
   min-height: 80px;
   padding: 0 30px;
   box-shadow: inset 0 -1px 0 0 variables.$linen;
+
+  @media (min-width: variables.$width-tablet) {
+    min-height: 89px;
+    padding: 0 50px;
+  }
 }
 
 .main-header__logo {
@@ -23,14 +28,13 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: variables.$width-tablet) {
+    left: 64px;
+    transform: translateY(-50%) scale(1.33);
+  }
 }
 
 .main-header__logo-image {
   display: block;
-}
-
-.main-nav__text-info {
-  margin: 0;
-  font-size: 15px;
-  color: variables.$dark-bluish-black;
 }

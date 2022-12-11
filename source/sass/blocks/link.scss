@@ -4,4 +4,9 @@
   display: block;
   padding: 29px 30px 26px 76px;
   box-shadow: 0 -1px 0 0 variables.$linen;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 33px 31px 32px;
+    box-shadow: none;
+  }
 }

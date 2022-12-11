@@ -4,7 +4,17 @@
 .site-list {
   @include mixins.list-reset;
   font-weight: 700;
+
+  @media (min-width: variables.$width-tablet) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    display: none; // временно
+  }
 }
+
+// .site-list__item {} // временно
 
 .site-list__link {
   @include mixins.link-reset;
