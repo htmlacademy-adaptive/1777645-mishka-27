@@ -14,12 +14,18 @@
     flex-wrap: wrap;
     font-size: 15px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    position: static;
+  }
 }
 
 .site-list__item {
-  &:first-child .site-list__link {
-    &:first-child {
-      padding-left: 0;
+  @media (min-width: variables.$width-tablet) {
+    &:first-child .site-list__link {
+      &:first-child {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -30,5 +36,10 @@
 
   @media (min-width: variables.$width-tablet) {
     padding: 21px 18px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    font-size: 17px;
+    padding: 33px 36px 31px;
   }
 }

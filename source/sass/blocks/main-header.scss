@@ -1,17 +1,26 @@
 @use "../global/variables.scss";
 
 .main-header {
+  border-bottom: 1px solid variables.$linen;
+}
+
+.main-header__wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 80px;
+  min-height: 79px;
   padding: 0 30px;
-  box-shadow: inset 0 -1px 0 0 variables.$linen;
 
   @media (min-width: variables.$width-tablet) {
-    min-height: 89px;
+    min-height: 88px;
     padding: 0 50px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
 }
 
@@ -30,11 +39,24 @@
   }
 
   @media (min-width: variables.$width-tablet) {
-    left: 64px;
-    transform: translateY(-50%) scale(1.33);
+    left: 62px;
+    transform: translateY(-47%);
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    left: 44.95%;
+    right: 50%;
   }
 }
 
 .main-header__logo-image {
   display: block;
+
+  @media (min-width: variables.$width-tablet) {
+    transform: scale(1.33);
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    transform: scale(2.05);
+  }
 }
