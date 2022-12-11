@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+
+.link {
+  display: block;
+  padding: 29px 30px 26px 76px;
+  box-shadow: 0 -1px 0 0 variables.$linen;
+}

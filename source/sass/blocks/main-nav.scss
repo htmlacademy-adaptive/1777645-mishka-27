@@ -1,0 +1,22 @@
+@use "../global/variables.scss";
+
+.main-nav__toggle {
+  width: 20px;
+  height: 14px;
+  border: none;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  z-index: 1;
+  background-color: variables.$light-main;
+
+  display: none;
+}
+
+.main-nav__text-info {
+  display: none;
+}

@@ -4,6 +4,7 @@
 .extra-list {
   @include mixins.list-reset;
   font-weight: 700;
+  display: none;
 }
 
 .extra-list__link {

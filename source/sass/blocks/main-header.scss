@@ -1,12 +1,13 @@
-@use "../global/mixins.scss";
 @use "../global/variables.scss";
 
 .main-header {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  padding: 22px 0;
-  box-shadow: 0 1px 0 0 variables.$linen;
+  min-height: 80px;
+  padding: 0 30px;
+  box-shadow: inset 0 -1px 0 0 variables.$linen;
 }
 
 .main-header__logo {
