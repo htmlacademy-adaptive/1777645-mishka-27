@@ -10,6 +10,10 @@
   @media (min-width: variables.$width-tablet) {
     min-height: 745px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    background-position: center top;
+  }
 }
 
 .hero__text-wrapper {
@@ -17,6 +21,12 @@
 
   @media (min-width: variables.$width-tablet) {
     padding: 155px 50px 0;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 157px;
   }
 }
 
@@ -38,10 +48,19 @@
       bottom: -12px;
       width: 100%;
       height: 24px;
-      background: url("../img/decor/zigzag.svg") repeat-x;
+      background: url("../img/decor/zigzag-tablet.svg") repeat-x;
     }
   }
 
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: auto auto 0 auto;
+
+    &::after {
+      bottom: -7px;
+      background: url("../img/decor/zigzag-desktop.svg") repeat-x;
+    }
+  }
 }
 
 .hero__list {
@@ -59,35 +78,71 @@
 }
 
 .hero__link {
+  position: relative;
   display: block;
   font-weight: 700;
   font-size: 19px;
   text-decoration: none;
   color: variables.$light-main;
-  position: relative;
   padding: 24px 30px 31px;
   background-color: variables.$moderate-aquamarine-1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+  }
 
   &:hover {
     padding-bottom: 36px;
     margin-top: -5px;
     background-color: variables.$moderate-aquamarine-4;
-    outline: none;
+
+    &::after {
+      opacity: 0.7;
+    }
   }
 
-  &:hover .hero__link-icon {
-    opacity: 0.7;
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 
-  &:active .hero__link-icon {
-    opacity: 0.3;
+  &--interior {
+    &::after {
+      width: 40px;
+      height: 62px;
+      top: 23px;
+      right: 36px;
+      background-image: url("../img/icon/interior.svg");
+
+      @media (min-width: variables.$width-tablet) {
+        top: 29px;
+      }
+    }
   }
 
-  &--shade {
+  &--toy {
     background-color: variables.$moderate-aquamarine-2;
 
     &:hover {
       background-color: variables.$shamrock;
+    }
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 21px;
+      right: 27px;
+      background-image: url("../img/icon/toy.svg");
+
+      @media (min-width: variables.$width-tablet) {
+        top: 32px;
+        right: 33px;
+      }
     }
   }
 
@@ -95,26 +150,5 @@
     padding: 26px 36px 33px;
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.hero__link-icon {
-  position: absolute;
-  top: 23px;
-  right: 36px;
-  opacity: 0.5;
-
-  @media (min-width: variables.$width-tablet) {
-    top: 29px;
-  }
-
-  &--toy {
-    top: 21px;
-    right: 27px;
-
-    @media (min-width: variables.$width-tablet) {
-      top: 32px;
-      right: 33px;
-    }
   }
 }
