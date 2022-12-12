@@ -1,6 +1,13 @@
+@use "../global/variables.scss";
+
 .title {
   margin: 0;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }

@@ -4,30 +4,75 @@
 .hero {
   display: flex;
   flex-direction: column;
-  min-height: 489px;
-  background: variables.$smoky-white url("../img/background-hero.jpg") center top -17px/100% auto no-repeat;
+  min-height: 488px;
+  background: url("../img/background-hero.jpg") center top -17px/contain no-repeat;
+
+  @media (min-width: variables.$width-tablet) {
+    min-height: 745px;
+  }
 }
 
-.hero__wrapper {
-  padding: 74px 30px 0;
+.hero__text-wrapper {
+  padding: 72px 30px 0;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 155px 50px 0;
+  }
 }
 
 .hero__title {
   text-align: center;
 }
 
+.hero__links-wrapper {
+  margin-top: auto;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -12px;
+      width: 100%;
+      height: 24px;
+      background: url("../img/decor/zigzag.svg") repeat-x;
+    }
+  }
+
+}
+
 .hero__list {
   @include mixins.list-reset;
-  margin-top: auto;
+
+  @media (min-width: variables.$width-tablet) {
+    display: flex;
+  }
 }
 
 .hero__item {
+  @media (min-width: variables.$width-tablet) {
+    width: 100%;
+  }
+}
+
+.hero__link {
+  display: block;
+  font-weight: 700;
+  font-size: 19px;
+  text-decoration: none;
+  color: variables.$light-main;
+  position: relative;
+  padding: 24px 30px 31px;
   background-color: variables.$moderate-aquamarine-1;
 
   &:hover {
-    padding-bottom: 5px;
+    padding-bottom: 36px;
     margin-top: -5px;
     background-color: variables.$moderate-aquamarine-4;
+    outline: none;
   }
 
   &:hover .hero__link-icon {
@@ -45,13 +90,12 @@
       background-color: variables.$shamrock;
     }
   }
-}
 
-.hero__link {
-  font-weight: 700;
-  font-size: 19px;
-  text-decoration: none;
-  color: variables.$light-main;
+  @media (min-width: variables.$width-tablet) {
+    padding: 26px 36px 33px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .hero__link-icon {
@@ -60,13 +104,17 @@
   right: 36px;
   opacity: 0.5;
 
-  &--additionally {
+  @media (min-width: variables.$width-tablet) {
+    top: 29px;
+  }
+
+  &--toy {
     top: 21px;
     right: 27px;
-  }
-}
 
-.hero__link-wrapper {
-  position: relative;
-  padding: 24px 30px 31px;
+    @media (min-width: variables.$width-tablet) {
+      top: 32px;
+      right: 33px;
+    }
+  }
 }
