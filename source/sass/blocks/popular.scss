@@ -1,5 +1,23 @@
 @use "../global/variables.scss";
 
+.popular {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/decor/zigzag-line.svg") repeat-x;
+  }
+}
+
+.popular__wrapper {
+  padding: 31px 30px 42px;
+}
+
 .popular__subtitle {
   margin: 0 0 5px;
 }
@@ -38,7 +56,10 @@
 
 .popular__image {
   display: block;
-  margin: 0 0 26px;
+  max-width: 334px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 26px;
 }
 
 .popular__price {
@@ -46,4 +67,10 @@
   font-weight: 700;
   color: variables.$dark-bluish-black;
   text-align: center;
+}
+
+.popular__button {
+  max-width: 334px;
+  width: 100%;
+  margin: 0 auto;
 }
