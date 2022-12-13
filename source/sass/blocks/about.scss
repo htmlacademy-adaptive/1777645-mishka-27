@@ -1,7 +1,106 @@
 @use "../global/mixins.scss";
 
+.about__wrapper {
+  padding: 31px 30px;
+}
+
+.about__subtitle {
+  margin: 0 0 28px;
+}
+
 .about__list {
   @include mixins.list-reset;
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  grid-template-areas: "material" "price" "like" "manually" "support" "gift";
   font-weight: 700;
   line-height: 20px;
+
+  @media (min-width: 570px) {
+    grid-template-areas: "material manually" "price support" "like gift";
+  }
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+  }
+
+  &--material {
+    grid-area: material;
+    margin-bottom: 29px;
+
+    &::before {
+      margin: 0 0 17px 8px;
+      width: 33px;
+      height: 38px;
+      background: url("../../img/icon/material.svg") no-repeat;
+    }
+  }
+
+  &--manually {
+    grid-area: manually;
+    margin-bottom: 32px;
+
+    &::before {
+      margin: 0 0 18px 3px;
+      width: 35px;
+      height: 34px;
+      background: url("../../img/icon/manually.svg") no-repeat;
+    }
+  }
+
+  &--price {
+    grid-area: price;
+    margin-bottom: 34px;
+
+    &::before {
+      margin: 0 0 27px;
+      width: 47px;
+      height: 27px;
+      background: url("../../img/icon/price.svg") no-repeat;
+    }
+  }
+
+  &--support {
+    grid-area: support;
+    margin-bottom: 31px;
+
+    &::before {
+      margin: 0 0 27px -6px;
+      width: 55px;
+      height: 23px;
+      background: url("../../img/icon/support.svg") no-repeat;
+    }
+  }
+
+  &--like {
+    grid-area: like;
+    margin-bottom: 31px;
+
+    &::before {
+      margin: 0 0 22px 7px;
+      width: 34px;
+      height: 27px;
+      background: url("../../img/icon/like.svg") no-repeat;
+    }
+
+    @media (min-width: 570px) {
+      margin: 0;
+    }
+  }
+
+  &--gift {
+    grid-area: gift;
+
+    &::before {
+      margin: 0 0 21px 3px;
+      width: 33px;
+      height: 32px;
+      background: url("../../img/icon/gift.svg") no-repeat;
+    }
+  }
 }
