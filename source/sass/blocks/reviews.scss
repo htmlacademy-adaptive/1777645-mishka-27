@@ -1,7 +1,25 @@
 @use "../global/variables.scss";
 
+.reviews {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/decor/zigzag-line.svg") repeat-x;
+  }
+}
+
+.reviews__wrapper {
+  padding: 26px 30px 51px;
+}
+
 .reviews__subtitle {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 }
 
 .reviews__item {
@@ -9,7 +27,7 @@
 }
 
 .reviews__text {
-  margin: 0 0 33px;
+  margin: 0 0 34px;
   font-size: 15px;
   line-height: 30px;
   color: variables.$dark-bluish-black;
@@ -30,6 +48,7 @@
 
 .reviews__arrow-buttons-group {
   display: flex;
+  justify-content: center;
   margin: 0 0 38px;
 }
 
@@ -55,4 +74,10 @@
   &:active .reviews__icon-arrow {
     opacity: 0.3;
   }
+}
+
+.reviews__write {
+  max-width: 334px;
+  width: 100%;
+  margin: 0 auto;
 }
