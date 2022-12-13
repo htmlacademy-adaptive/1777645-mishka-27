@@ -10,30 +10,74 @@
     bottom: 0;
     width: 100%;
     height: 6px;
-    background: url("../img/decor/zigzag-line.svg") repeat-x;
+    background: url("../img/decor/zigzag-line-mobile.svg") repeat-x;
+
+    @media (min-width: variables.$width-tablet) {
+      height: 17px;
+      background-image: url("../img/decor/zigzag-line-tablet.svg");
+    }
   }
 }
 
 .popular__wrapper {
   padding: 31px 30px 42px;
+
+  @media (min-width: variables.$width-tablet) {
+    position: relative;
+    padding: 53px 50px 69px;
+  }
+}
+
+.popular__title-group {
+  margin: 0 0 16px;
+
+  @media (min-width: variables.$width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 37px;
+  }
 }
 
 .popular__subtitle {
   margin: 0 0 5px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0;
+  }
 }
 
 .popular__signature {
-  margin: 0 0 16px;
+  margin: 0;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
   color: variables.$moderate-aquamarine-1;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 7px;
+    width: 126px;
+    text-align: center;
+    line-height: 17px;
+  }
+}
+
+.popular__content-group {
+  @media (min-width: variables.$width-tablet) {
+    width: calc(50% - 42px);
+  }
 }
 
 .popular__text {
   margin: 0 0 21px;
   font-size: 15px;
   color: variables.$dark-bluish-black;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 40px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .popular__list {
@@ -41,6 +85,10 @@
   font-size: 15px;
   line-height: 20px;
   color: variables.$dark-bluish-black;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 58px;
+  }
 }
 
 .popular__item {
@@ -60,6 +108,13 @@
   width: 100%;
   height: auto;
   margin: 0 auto 26px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0;
+    position: absolute;
+    right: 50px;
+    bottom: 68px;
+  }
 }
 
 .popular__price {
@@ -67,6 +122,12 @@
   font-weight: 700;
   color: variables.$dark-bluish-black;
   text-align: center;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 32px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .popular__button {
