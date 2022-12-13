@@ -1,8 +1,9 @@
 @use "../global/mixins.scss";
 @use "../global/variables.scss";
 
-.contacts__wrapper {
-  margin: 0 0 62px;
+.contacts__text-wrapper {
+  padding: 38px 30px;
+  margin: 0 0 24px;
 }
 
 .contacts__subtitle {
@@ -44,9 +45,16 @@
 }
 
 .contacts__map {
-  margin: 0 0 41px;
+  margin: 0 0 42px;
+}
+
+.contacts__button-wrapper {
+  padding: 0 30px;
+  margin: 0 0 39px;
 }
 
 .contacts__write {
-  margin: 0 0 39px;
+  max-width: 334px;
+  width: 100%;
+  margin: 0 auto;
 }
