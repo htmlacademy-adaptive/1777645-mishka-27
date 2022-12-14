@@ -16,6 +16,11 @@
       height: 17px;
       background-image: url("../img/decor/zigzag-line-tablet.svg");
     }
+
+    @media (min-width: variables.$width-desktop) {
+      height: 23px;
+      background-image: url("../img/decor/zigzag-line-desktop.svg");
+    }
   }
 }
 
@@ -25,6 +30,12 @@
   @media (min-width: variables.$width-tablet) {
     position: relative;
     padding: 53px 50px 69px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 132px 50px 96px;
   }
 }
 
@@ -36,6 +47,13 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 0 37px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 0 19px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 36px;
   }
 }
 
@@ -60,11 +78,20 @@
     text-align: center;
     line-height: 17px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-right: 30px;
+  }
 }
 
 .popular__content-group {
   @media (min-width: variables.$width-tablet) {
     width: calc(50% - 42px);
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-left: 175px;
+    width: 292px;
   }
 }
 
@@ -78,6 +105,10 @@
     font-size: 17px;
     line-height: 30px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 52px;
+  }
 }
 
 .popular__list {
@@ -88,6 +119,10 @@
 
   @media (min-width: variables.$width-tablet) {
     margin: 0 0 58px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 112px;
   }
 }
 
@@ -114,6 +149,14 @@
     position: absolute;
     right: 50px;
     bottom: 68px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    max-width: 525px;
+    height: 636px;
+    right: 50px;
+    bottom: 96px;
+    z-index: -1;
   }
 }
 
