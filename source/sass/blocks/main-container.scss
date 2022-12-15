@@ -32,6 +32,10 @@
 
 .main-container__about {
   margin-bottom: 57px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin-bottom: 72px;
+  }
 }
 
 .main-container__reviews {

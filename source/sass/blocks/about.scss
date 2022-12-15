@@ -1,23 +1,41 @@
 @use "../global/mixins.scss";
+@use "../global/variables.scss";
 
 .about__wrapper {
   padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+  }
 }
 
 .about__subtitle {
   margin: 0 0 28px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 40px;
+  }
 }
 
 .about__list {
   @include mixins.list-reset;
   display: grid;
-  grid-template-columns: repeat(2, 260px);
+  grid-template-columns: 260px;
   grid-template-areas: "material" "price" "like" "manually" "support" "gift";
+  gap: 28px 0;
   font-weight: 700;
   line-height: 20px;
 
   @media (min-width: 570px) {
+    grid-template-columns: repeat(2, 260px);
     grid-template-areas: "material manually" "price support" "like gift";
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    grid-template-columns: repeat(2, 325px);
+    gap: 52px 10px;
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
@@ -27,69 +45,52 @@
 
   &::before {
     content: "";
+    width: 55px;
+    height: 38px;
+    margin: 0 0 17px;
+
+    @media (min-width: variables.$width-tablet) {
+      margin: 0 0 20px;
+    }
   }
 
   &--material {
     grid-area: material;
-    margin-bottom: 29px;
 
     &::before {
-      margin: 0 0 17px 8px;
-      width: 33px;
-      height: 38px;
-      background: url("../../img/icon/material.svg") no-repeat;
+      background: url("../../img/icon/material.svg") 8px 0/33px 38px no-repeat;
     }
   }
 
   &--manually {
     grid-area: manually;
-    margin-bottom: 32px;
 
     &::before {
-      margin: 0 0 18px 3px;
-      width: 35px;
-      height: 34px;
-      background: url("../../img/icon/manually.svg") no-repeat;
+      background: url("../../img/icon/manually.svg") 3px 3px/35px 34px no-repeat;
     }
   }
 
   &--price {
     grid-area: price;
-    margin-bottom: 34px;
 
     &::before {
-      margin: 0 0 27px;
-      width: 47px;
-      height: 27px;
-      background: url("../../img/icon/price.svg") no-repeat;
+      background: url("../../img/icon/price.svg") 0 1px/47px 27px no-repeat;
     }
   }
 
   &--support {
     grid-area: support;
-    margin-bottom: 31px;
 
     &::before {
-      margin: 0 0 27px -6px;
-      width: 55px;
-      height: 23px;
-      background: url("../../img/icon/support.svg") no-repeat;
+      background: url("../../img/icon/support.svg") 0 4px/55px 23px no-repeat;
     }
   }
 
   &--like {
     grid-area: like;
-    margin-bottom: 31px;
 
     &::before {
-      margin: 0 0 22px 7px;
-      width: 34px;
-      height: 27px;
-      background: url("../../img/icon/like.svg") no-repeat;
-    }
-
-    @media (min-width: 570px) {
-      margin: 0;
+      background: url("../../img/icon/like.svg") 7px 6px/34px 27px no-repeat;
     }
   }
 
@@ -97,10 +98,7 @@
     grid-area: gift;
 
     &::before {
-      margin: 0 0 21px 3px;
-      width: 33px;
-      height: 32px;
-      background: url("../../img/icon/gift.svg") no-repeat;
+      background: url("../../img/icon/gift.svg") 3px 2px/33px 32px no-repeat;
     }
   }
 }
