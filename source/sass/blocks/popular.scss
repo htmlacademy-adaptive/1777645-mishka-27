@@ -2,6 +2,15 @@
 
 .popular {
   position: relative;
+  padding-bottom: 42px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding-bottom: 96px;
+  }
 
   &::after {
     position: absolute;
@@ -25,17 +34,17 @@
 }
 
 .popular__wrapper {
-  padding: 31px 30px 42px;
+  padding: 0 30px;
 
   @media (min-width: variables.$width-tablet) {
     position: relative;
-    padding: 53px 50px 69px;
+    padding: 0 50px;
   }
 
   @media (min-width: variables.$width-desktop) {
     width: 1050px;
     margin: 0 auto;
-    padding: 132px 50px 96px;
+    padding-top: 62px;
   }
 }
 
@@ -147,15 +156,13 @@
   @media (min-width: variables.$width-tablet) {
     margin: 0;
     position: absolute;
+    bottom: 0;
     right: 50px;
-    bottom: 68px;
   }
 
   @media (min-width: variables.$width-desktop) {
     max-width: 525px;
     height: 636px;
-    right: 50px;
-    bottom: 96px;
     z-index: -1;
   }
 }

@@ -17,13 +17,7 @@
     box-shadow: inset 1px 0 0 0 variables.$linen;
 
     &:last-child .user-list__link {
-      &:last-child {
-        padding-right: 0;
-
-        @media (min-width: variables.$width-desktop) {
-          padding-right: 2px;
-        }
-      }
+      padding-right: 0;
     }
   }
 }
@@ -32,6 +26,8 @@
   @include mixins.link-reset;
   @include mixins.link-behaviour;
   position: relative;
+  display: block;
+  padding: 33px 31px 31px;
 
   &:hover .user-list__icon {
     color: variables.$moderate-aquamarine-1;

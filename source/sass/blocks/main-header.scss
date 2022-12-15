@@ -51,12 +51,4 @@
 
 .main-header__logo-image {
   display: block;
-
-  @media (min-width: variables.$width-tablet) {
-    transform: scale(1.33);
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    transform: scale(2.05);
-  }
 }

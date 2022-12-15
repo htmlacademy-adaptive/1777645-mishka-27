@@ -2,6 +2,7 @@
 
 .reviews {
   position: relative;
+  padding-bottom: 51px;
 
   &::after {
     position: absolute;
@@ -10,12 +11,12 @@
     bottom: 0;
     width: 100%;
     height: 6px;
-    background: url("../img/decor/zigzag-line.svg") repeat-x;
+    background: url("../img/decor/zigzag-line-mobile.svg") repeat-x;
   }
 }
 
 .reviews__wrapper {
-  padding: 26px 30px 51px;
+  padding: 0 30px;
 }
 
 .reviews__subtitle {

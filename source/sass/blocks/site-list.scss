@@ -23,9 +23,13 @@
 .site-list__item {
   @media (min-width: variables.$width-tablet) {
     &:first-child .site-list__link {
-      &:first-child {
-        padding-left: 0;
-      }
+      padding-left: 0;
+    }
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    &:not(:first-child) {
+      box-shadow: inset 1px 0 0 0 variables.$linen;
     }
   }
 }
@@ -33,6 +37,7 @@
 .site-list__link {
   @include mixins.link-reset;
   @include mixins.link-behaviour;
+  display: block;
 
   @media (min-width: variables.$width-tablet) {
     padding: 21px 18px;

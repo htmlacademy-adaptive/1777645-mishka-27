@@ -5,3 +5,39 @@
   background-color: variables.$smoky-white;
   text-align: center;
 }
+
+.main-container__hero {
+  margin-bottom: 31px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 70px;
+  }
+}
+
+.main-container__popular {
+  margin-bottom: 31px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 68px;
+  }
+}
+
+.main-container__about {
+  margin-bottom: 57px;
+}
+
+.main-container__reviews {
+  margin-bottom: 38px;
+}
+
+.main-container__contacts {
+  margin-bottom: 39px;
+}
