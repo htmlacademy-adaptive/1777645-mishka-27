@@ -1,11 +1,24 @@
 @use "../global/mixins.scss";
 @use "../global/variables.scss";
 
+.about {
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px;
+  }
+}
+
 .about__wrapper {
   padding: 0 30px;
 
   @media (min-width: variables.$width-tablet) {
     padding: 0 50px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 0 0 0 175px;
   }
 }
 
@@ -36,6 +49,10 @@
     gap: 52px 10px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    column-gap: 25px;
   }
 }
 

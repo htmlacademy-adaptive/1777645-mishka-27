@@ -34,7 +34,11 @@
   margin-bottom: 57px;
 
   @media (min-width: variables.$width-tablet) {
-    margin-bottom: 72px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 88px;
   }
 }
 
