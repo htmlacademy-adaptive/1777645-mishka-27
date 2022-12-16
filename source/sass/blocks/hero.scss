@@ -63,8 +63,7 @@
   }
 
   @media (min-width: variables.$width-desktop) {
-    width: 1050px;
-    margin: auto auto 0 auto;
+    padding: 0;
 
     &::after {
       bottom: -7px;
@@ -78,6 +77,11 @@
 
   @media (min-width: variables.$width-tablet) {
     display: flex;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
   }
 }
 
