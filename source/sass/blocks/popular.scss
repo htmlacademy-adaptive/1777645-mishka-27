@@ -28,7 +28,7 @@
 
     @media (min-width: variables.$width-desktop) {
       height: 23px;
-      background-image: url("../img/decor/zigzag-line-desktop.svg");
+      background: url("../img/decor/zigzag-line-desktop.svg") center no-repeat;
     }
   }
 }
