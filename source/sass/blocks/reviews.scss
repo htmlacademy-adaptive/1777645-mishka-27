@@ -17,10 +17,22 @@
       height: 17px;
       background: url("../img/decor/zigzag-line-tablet.svg");
     }
+
+    @media (min-width: variables.$width-desktop) {
+      height: 23px;
+      background: url("../img/decor/zigzag-line-desktop.svg") center no-repeat;
+    }
   }
 
   @media (min-width: variables.$width-tablet) {
     padding-bottom: 85px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px 90px;
   }
 }
 
@@ -31,6 +43,10 @@
     padding: 84px 50px 48px;
     background: url("../img/background-review.jpg") left/contain no-repeat;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 78px 0 95px 175px;
+  }
 }
 
 .reviews__subtitle {
@@ -38,6 +54,10 @@
 
   @media (min-width: variables.$width-tablet) {
     margin: 0 0 38px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin: 0 0 36px;
   }
 }
 
@@ -55,6 +75,10 @@
     margin: 0 0 60px;
     font-size: 17px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    margin: 0 0 44px;
+  }
 }
 
 .reviews__autor-name {
@@ -65,6 +89,10 @@
 
   @media (min-width: variables.$width-tablet) {
     font-size: 18px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    font-size: 17px;
   }
 }
 
@@ -88,6 +116,10 @@
     right: 50px;
     bottom: 134px;
     margin: 0;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    bottom: 188px;
   }
 }
 
