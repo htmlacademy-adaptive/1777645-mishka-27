@@ -4,6 +4,8 @@
   display: grid;
   grid-template-columns: 100%;
   justify-items: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .map__map-image {
@@ -20,6 +22,6 @@
   grid-area: 1/1/-1/-1;
 
   @media (min-width: variables.$width-tablet) {
-    height: 457px;
+    height: 100%;
   }
 }

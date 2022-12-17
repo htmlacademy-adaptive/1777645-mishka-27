@@ -21,7 +21,9 @@
   }
 
   &--spacing {
-    letter-spacing: -1px;
+    @media (min-width: variables.$width-tablet) {
+      letter-spacing: -1px;
+    }
   }
 
   &:hover {
