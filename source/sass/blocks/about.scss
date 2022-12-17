@@ -39,7 +39,7 @@
   font-weight: 700;
   line-height: 20px;
 
-  @media (min-width: 570px) {
+  @media (min-width: variables.$width-device) {
     grid-template-columns: repeat(2, 260px);
     grid-template-areas: "material manually" "price support" "like gift";
   }
