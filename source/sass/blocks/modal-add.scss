@@ -22,17 +22,31 @@
   align-items: center;
   padding: 29px 30px 46px;
   background-color: variables.$light-main;
-  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25),
-    0 -1px 0 0 variables.$silver;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border-top: 1px solid variables.$silver;
   box-sizing: border-box;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 37px 107px 46px;
+    border-left: 1px solid variables.$silver;
+    border-right: 1px solid variables.$silver;
+  }
 }
 
 .modal-add__title {
-  margin: 0 0 15px 6px;
+  margin: 0 0 15px 18px;
+  width: 160px;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$width-tablet) {
+    width: 100%;
+    font-size: 30px;
+    line-height: 57px;
+    margin: 0 0 13px;
+  }
 }
 
 .modal-add__text {
@@ -40,6 +54,11 @@
   font-size: 15px;
   line-height: 30px;
   color: variables.$dark-bluish-black;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 18px;
+    font-size: 17px;
+  }
 }
 
 .modal-add__radio-group {
@@ -70,6 +89,10 @@
   &:active {
     border-color: variables.$moderate-aquamarine-2;
   }
+
+  @media (min-width: variables.$width-tablet) {
+    width: 108px;
+  }
 }
 
 .modal-add__radio {
@@ -82,6 +105,10 @@
       width: 82px;
       height: 52px;
       border: 2px solid variables.$moderate-aquamarine-1;
+
+      @media (min-width: variables.$width-tablet) {
+        width: 112px;
+      }
     }
   }
 }
