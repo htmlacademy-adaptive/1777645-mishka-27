@@ -56,4 +56,8 @@
 
 .main-container__contacts {
   margin-bottom: 39px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin-bottom: 57px;
+  }
 }
