@@ -1,11 +1,6 @@
 @use "../global/mixins.scss";
 @use "../global/variables.scss";
 
-.social {
-  padding: 16px 0;
-  box-sizing: border-box;
-}
-
 .social__list {
   @include mixins.list-reset;
   display: flex;
