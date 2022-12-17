@@ -38,8 +38,11 @@
   @include mixins.link-reset;
   @include mixins.link-behaviour;
   display: block;
+  padding: 28px 31px 27px 76px;
+  box-shadow: inset 0 -1px 0 0 variables.$linen;
 
   @media (min-width: variables.$width-tablet) {
+    box-shadow: none;
     padding: 21px 18px;
   }
 

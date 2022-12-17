@@ -27,7 +27,8 @@
   @include mixins.link-behaviour;
   position: relative;
   display: block;
-  padding: 33px 31px 31px;
+  padding: 28px 31px 27px 76px;
+  box-shadow: inset 0 -1px 0 0 variables.$linen;
 
   &:hover .user-list__icon {
     color: variables.$moderate-aquamarine-1;
@@ -38,6 +39,9 @@
   }
 
   @media (min-width: variables.$width-tablet) {
+    box-shadow: none;
+    padding: 33px 36px 31px;
+
     &--search {
       padding: 36px 31px 34px 34px;
     }
