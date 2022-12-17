@@ -59,74 +59,98 @@
     </header>
     <main class="main-container">
       <h1 class="main-container__title title">Вязание на заказ</h1>
-      <section class="request">
+      <section class="main-container__request request">
         <div class="request__wrapper">
           <h2 class="visually-hidden">Форма заказа.</h2>
-          <p class="request__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <div class="request__text-wrapper">
+            <p class="request__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          </div>
           <form class="request__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="request__group request__group--group-type">
-              <legend class="request__heading">Тип</legend>
-              <label class="request__text-option">
-                <input class="request__radio visually-hidden" type="radio" name="type" value="interior-accessory" checked>
-                Аксессуар&nbsp;для интерьера
-                <span class="request__mark-radio"></span>
-              </label>
-              <label class="request__text-option">
-                <input class="request__radio visually-hidden" type="radio" name="type" value="childrens-toy">
-                Детская игрушка
-                <span class="request__mark-radio"></span>
-              </label>
+              <p class="request__heading request__heading--type">Тип</p>
+              <ul class="request__list request__list--type">
+                <li class="request__item">
+                  <label class="request__text-option">
+                    <input class="request__radio visually-hidden" type="radio" name="type" value="interior-accessory" checked>
+                    Аксессуар&nbsp;для интерьера
+                    <span class="request__mark-radio"></span>
+                  </label>
+                </li>
+                <li class="request__item">
+                  <label class="request__text-option">
+                    <input class="request__radio visually-hidden" type="radio" name="type" value="childrens-toy">
+                    Детская игрушка
+                    <span class="request__mark-radio"></span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <div class="request__group-wrapper">
               <fieldset class="request__group request__group--group-color">
-                <legend class="request__heading">Цвет</legend>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
-                  <span class="request__mark-checkbox"></span>
-                  Белый
-                </label>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="gray" checked>
-                  <span class="request__mark-checkbox"></span>
-                  Серый
-                </label>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="tiffany">
-                  <span class="request__mark-checkbox"></span>
-                  Тиффани
-                </label>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="black">
-                  <span class="request__mark-checkbox"></span>
-                  Черный
-                </label>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="pink">
-                  <span class="request__mark-checkbox"></span>
-                  Розовый
-                </label>
-                <label class="request__text-option">
-                  <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="orange">
-                  <span class="request__mark-checkbox"></span>
-                  Оранжевый
-                </label>
+                <p class="request__heading request__heading--color">Цвет</p>
+                <ul class="request__list request__list--color">
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
+                      <span class="request__mark-checkbox"></span>
+                      Белый
+                    </label>
+                  </li>
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="gray" checked>
+                      <span class="request__mark-checkbox"></span>
+                      Серый
+                    </label>
+                  </li>
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="tiffany">
+                      <span class="request__mark-checkbox"></span>
+                      Тиффани
+                    </label>
+                  </li>
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="black">
+                      <span class="request__mark-checkbox"></span>
+                      Черный
+                    </label>
+                  </li>
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="pink">
+                      <span class="request__mark-checkbox"></span>
+                      Розовый
+                    </label>
+                  </li>
+                  <li class="request-item">
+                    <label class="request__text-option">
+                      <input class="request__checkbox visually-hidden" type="checkbox" name="color" value="orange">
+                      <span class="request__mark-checkbox"></span>
+                      Оранжевый
+                    </label>
+                  </li>
+                </ul>
               </fieldset>
             </div>
             <fieldset class="request__group request__group--group-initials">
-              <legend class="request__heading">ФИО</legend>
-              <label class="request__text-initials">Имя:
-                <input class="request__field field-entry" type="text" name="first-name" placeholder="Введите ваше имя*" required>
-              </label>
-              <label class="request__text-initials">Фамилия:
-                <input class="request__field field-entry" type="text" name="last-name" placeholder="Укажите фамилию*" required>
-              </label>
-              <label class="request__text-initials">Отчество:
-                <input class="request__field field-entry" type="text" name="patronymic" placeholder="Отчество, если желаете">
-              </label>
+              <p class="request__heading request__heading--initials">ФИО</p>
+              <div class="request__inintials-wrappers">
+                <label class="request__text-initials">Имя:
+                  <input class="request__field field-entry" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+                </label>
+                <label class="request__text-initials">Фамилия:
+                  <input class="request__field field-entry" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+                </label>
+                <label class="request__text-initials">Отчество:
+                  <input class="request__field field-entry" type="text" name="patronymic" placeholder="Отчество, если желаете">
+                </label>
+              </div>
             </fieldset>
             <div class="request__group-wrapper">
               <fieldset class="request__group request__group--group-phone">
-                <legend class="request__heading">Тел</legend>
+                <p class="request__heading request__heading--phone">Тел</p>
                 <label class="visually-hidden" for="phone">Введите номер телефона.</label>
                 <div class="request__group-input">
                   <input class="request__field field-entry field-entry--icon" type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
@@ -139,7 +163,7 @@
                 </div>
               </fieldset>
               <fieldset class="request__group request__group--group-email">
-                <legend class="request__heading">E-mail</legend>
+                <p class="request__heading request__heading--email">E-mail</p>
                 <label class="visually-hidden" for="email">Введите email.</label>
                 <div class="request__group-input">
                   <input class="request__field field-entry field-entry--icon" type="text" id="email" name="email" placeholder="Ваш Email*" required>
@@ -150,7 +174,7 @@
               </fieldset>
             </div>
             <fieldset class="request__group request__group--additionally">
-              <legend class="request__heading">Доп</legend>
+              <p class="request__heading request__heading--additionally">Доп</p>
               <label class="visually-hidden" for="text">Введите сообщение.</label>
               <textarea class="request__field field-entry field-entry--textarea" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
@@ -202,6 +226,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 
 </html>

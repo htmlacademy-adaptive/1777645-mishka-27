@@ -1,81 +1,173 @@
 @use "../global/variables.scss";
+@use "../global/mixins.scss";
 
 .request {
   display: flex;
   flex-direction: column;
 }
 
-.request__wrapper {
-  padding: 17px 0 55px;
+.request__text-wrapper {
+  padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+  }
 }
 
 .request__text {
   margin: 0 0 30px;
   font-size: 13px;
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .request__form {
   display: flex;
   flex-direction: column;
+  padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0;
+  }
 }
 
 .request__group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
   border: none;
-  border-top: 1px solid variables.$moderate-aquamarine-3;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$moderate-aquamarine-3;
+
+    @media (min-width: variables.$width-tablet) {
+      display: none;
+    }
+  }
 
   &--group-type {
-    padding: 22px 0;
-    margin: 0 0 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 7px 0;
+    margin: 0 0 33px;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 
   &--group-color {
-    padding: 24px 0;
-    margin: 0 0 9px;
-    display: flex;
-    flex-direction: column;
-    gap: 23px 0;
+    margin: 0 0 33px;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 
   &--group-initials {
-    padding: 29px 0 0;
     margin: 0 0 34px;
-    display: flex;
-    flex-direction: column;
-    gap: 23px 0;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 
   &--group-phone {
-    padding: 2px 0 0;
-    margin: 0 0 39px;
+    margin: 0 0 37px;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 
   &--group-email {
-    padding: 2px 0 0;
-    margin: 0 0 38px;
+    margin: 0 0 36px;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 
   &--additionally {
-    padding: 21px 0 1px;
-    margin: 0 0 10px;
+    margin: 0 0 17px;
+
+    @media (min-width: variables.$width-tablet) {
+      padding: 0 50px;
+    }
   }
 }
 
 .request__heading {
   position: relative;
-  padding: 0 23px 0 0;
+  padding-right: 23px;
+  margin: 0 0 15px;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   color: variables.$moderate-aquamarine-1;
+  background-color: variables.$light-main;
+
+  @media (min-width: variables.$width-tablet) {
+    background-color: inherit;
+  }
+
+  &--type {
+    margin: 0 0 22px;
+  }
+
+  &--color {
+    margin: 0 0 25px;
+  }
+
+  &--initials {
+    margin: 0 0 29px;
+  }
+
+  &--phone {
+    margin: 0 0 3px;
+  }
+
+  &--email {
+    margin: 0 0 4px;
+  }
+
+  &--additionally {
+    margin: 0 0 22px;
+  }
+}
+
+.request__list {
+  @include mixins.list-reset;
+
+  &--type {
+    display: flex;
+    flex-direction: column;
+    gap: 7px 0;
+  }
+
+  &--color {
+    display: flex;
+    flex-direction: column;
+    gap: 23px 0;
+
+    @media (min-width: variables.$width-device) {
+      display: grid;
+      grid-template-columns: repeat(2, 260px);
+    }
+  }
 }
 
 .request__text-option {
+  display: block;
   position: relative;
   padding: 10px 0 10px 61px;
   font-weight: 700;
@@ -119,6 +211,12 @@
   }
 }
 
+.request__group-wrapper {
+  @media (min-width: variables.$width-tablet) {
+    background-color: variables.$smoky-white;
+  }
+}
+
 .request__checkbox {
   &:checked + .request__mark-checkbox {
     &::after {
@@ -153,8 +251,24 @@
   }
 }
 
+.request__text-initials {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.request__inintials-wrappers {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 23px 0;
+}
+
 .request__group-input {
   position: relative;
+  width: 100%;
 
   &:hover .request__icon-input,
   &:focus .request__icon-input {
@@ -174,17 +288,13 @@
   }
 }
 
-.request__text-initials {
-  display: flex;
-  flex-direction: column;
-  font-weight: 700;
-  line-height: 18px;
-  cursor: pointer;
-}
-
 .request__subtext {
   margin: 0 0 30px;
   font-size: 14px;
   line-height: 16px;
   color: variables.$dark-bluish-black;
+}
+
+.request__button{
+  align-self: center;
 }

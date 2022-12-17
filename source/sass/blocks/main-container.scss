@@ -1,7 +1,8 @@
 @use "../global/variables.scss";
 
 .main-container__title {
-  padding: 74px 0;
+  padding: 73px 30px;
+  margin: 0 0 17px;
   background-color: variables.$smoky-white;
   text-align: center;
 }
@@ -64,4 +65,8 @@
   @media (min-width: variables.$width-desktop) {
     margin-bottom: 105px;
   }
+}
+
+.main-container__request {
+  margin-bottom: 55px;
 }
