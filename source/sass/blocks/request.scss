@@ -8,20 +8,30 @@
 
 .request__text-wrapper {
   padding: 0 30px;
+  margin: 0 0 30px;
 
   @media (min-width: variables.$width-tablet) {
     padding: 0 50px;
+    margin: 0 0 14px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto 13px;
   }
 }
 
 .request__text {
-  margin: 0 0 30px;
+  margin: 0;
   font-size: 13px;
 
   @media (min-width: variables.$width-tablet) {
-    margin: 0 0 14px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 0 175px;
   }
 }
 
@@ -58,11 +68,6 @@
     }
   }
 
-  @media (min-width: variables.$width-tablet) {
-    display: grid;
-    grid-template-columns: 167px auto;
-  }
-
   &--group-type {
     margin: 0 0 33px;
 
@@ -78,6 +83,10 @@
     @media (min-width: variables.$width-tablet) {
       padding: 50px 50px;
       margin: 0;
+    }
+
+    @media (min-width: variables.$width-desktop) {
+      padding: 48px 50px 52px;
     }
   }
 
@@ -114,6 +123,29 @@
     @media (min-width: variables.$width-tablet) {
       padding: 50px 50px;
       margin: 0 0 3px;
+    }
+
+    @media (min-width: variables.$width-tablet) {
+      padding-bottom: 49px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    display: grid;
+    grid-template-columns: 167px auto;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1150px;
+    padding-right: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 175px auto;
+    box-sizing: border-box;
+
+    &--group-color {
+      padding-right: 0;
     }
   }
 }
@@ -156,6 +188,10 @@
     margin: 18px 0 0;
     background-color: inherit;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    margin: 18px 0 0 61px;
+  }
 }
 
 .request__list {
@@ -185,6 +221,11 @@
     @media (min-width: variables.$width-tablet) {
       gap: 24px 52px;
     }
+
+    @media (min-width: variables.$width-desktop) {
+      grid-template-columns: repeat(3, 210px);
+      column-gap: 53px;
+    }
   }
 }
 
@@ -200,6 +241,11 @@
     padding: 17px 0 17px 81px;
     font-size: 19px;
     line-height: 18px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding-top: 19px;
+    padding-bottom: 15px;
   }
 }
 
@@ -354,11 +400,19 @@
     right: 26px;
   }
 
+  @media (min-width: variables.$width-desktop) {
+    right: 7px;
+  }
+
   &--message {
     right: 3px;
 
     @media (min-width: variables.$width-tablet) {
       right: 22px;
+    }
+
+    @media (min-width: variables.$width-desktop) {
+      right: 3px;
     }
   }
 }
@@ -372,6 +426,13 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 225px;
+    box-sizing: border-box;
   }
 }
 

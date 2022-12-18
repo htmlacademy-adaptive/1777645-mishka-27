@@ -24,6 +24,10 @@
     @media (min-width: variables.$width-tablet) {
       padding-right: 57px;
     }
+
+    @media (min-width: variables.$width-desktop) {
+      padding-right: 38px;
+    }
   }
 
   &:hover {
