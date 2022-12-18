@@ -137,13 +137,16 @@
             <fieldset class="request__group request__group--group-initials">
               <p class="request__heading request__heading--initials">ФИО</p>
               <div class="request__inintials-wrappers">
-                <label class="request__text-initials">Имя:
+                <label class="request__text-initials">
+                  <span>Имя:</span>
                   <input class="request__field field-entry" type="text" name="first-name" placeholder="Введите ваше имя*" required>
                 </label>
-                <label class="request__text-initials">Фамилия:
+                <label class="request__text-initials">
+                  <span>Фамилия:</span>
                   <input class="request__field field-entry" type="text" name="last-name" placeholder="Укажите фамилию*" required>
                 </label>
-                <label class="request__text-initials">Отчество:
+                <label class="request__text-initials">
+                  <span>Отчество:</span>
                   <input class="request__field field-entry" type="text" name="patronymic" placeholder="Отчество, если желаете">
                 </label>
               </div>
@@ -178,8 +181,10 @@
               <label class="visually-hidden" for="text">Введите сообщение.</label>
               <textarea class="request__field field-entry field-entry--textarea" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
-            <span class="request__subtext">*Поля обязательны для заполнения</span>
-            <button class="request__button button button--tag-button button--spacing" type="submit">Отправить заказ</button>
+            <div class="request__group-bottom">
+              <span class="request__subtext">*Поля обязательны для заполнения</span>
+              <button class="request__button button button--tag-button button--spacing" type="submit">Отправить заказ</button>
+            </div>
           </form>
         </div>
       </section>
