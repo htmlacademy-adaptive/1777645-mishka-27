@@ -8,6 +8,12 @@
 
 .player__poster {
   display: block;
+
+  @media (min-width: 610px) {
+    width: 550px;
+    height: 317px;
+    object-fit: cover;
+  }
 }
 
 .player__button {
@@ -17,17 +23,17 @@
   transform: translate(-50%, -50%);
   padding: 0;
   border: none;
-  width: 100px;
+  width: 101px;
   height: 77px;
   background: url("../img/icon/play.svg") no-repeat;
   cursor: pointer;
 
   &:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 
   &:active {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.3;
   }
 }
