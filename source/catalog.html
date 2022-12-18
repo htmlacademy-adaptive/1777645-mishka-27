@@ -58,8 +58,10 @@
       </div>
     </header>
     <main class="main-container">
-      <h1 class="main-container__title title">Каталог товаров</h1>
-      <section class="catalog-products">
+      <div class="main-container__title-wrapper main-container__title-wrapper--catalog">
+        <h1 class="main-container__title title">Каталог товаров</h1>
+      </div>
+      <section class="main-container__catalog-products catalog-products">
         <h2 class="visually-hidden">Список товаров</h2>
         <div class="catalog-products__wrapper">
           <ul class="catalog-products__list">
@@ -132,13 +134,13 @@
           </ul>
         </div>
       </section>
-      <section class="production">
+      <section class="main-container__production production">
         <div class="production__wrapper">
           <div class="production__title-wrapper">
             <h2 class="production__title">Процесс производства</h2>
           </div>
           <div class="production__player player">
-            <img class="player__poster" src="./img/poster.jpg" width="260" height="150" alt="Корзинка бирюзово-белая.">
+            <img class="player__poster" src="./img/video/video-mobile.jpg" width="260" height="150" alt="Корзинка бирюзово-белая.">
             <button class="player__button" type="button">
               <span class="visually-hidden">Воспроизвести видео</span>
             </button>

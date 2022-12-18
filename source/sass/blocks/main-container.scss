@@ -66,6 +66,10 @@
   background-color: variables.$smoky-white;
   z-index: -1;
 
+  &--catalog {
+    margin: 0 0 30px;
+  }
+
   @media (min-width: variables.$width-tablet) {
     position: relative;
     padding: 0 50px;
@@ -114,4 +118,9 @@
   @media (min-width: variables.$width-tablet) {
     margin-bottom: 50px;
   }
+}
+
+
+.main-container__catalog-products {
+  margin-bottom: 30px;
 }
