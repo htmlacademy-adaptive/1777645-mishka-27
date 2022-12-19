@@ -136,4 +136,8 @@
 
 .main-container__production {
   margin-bottom: 58px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin-bottom: 64px;
+  }
 }

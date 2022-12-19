@@ -8,11 +8,16 @@
 
 .player__poster {
   display: block;
+  object-fit: cover;
 
   @media (min-width: 610px) {
     width: 550px;
     height: 317px;
-    object-fit: cover;
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    width: 668px;
+    height: 455px;
   }
 }
 

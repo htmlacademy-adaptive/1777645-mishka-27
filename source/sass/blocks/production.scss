@@ -3,6 +3,10 @@
 
 .production {
   padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+  }
 }
 
 .production__wrapper {
@@ -24,11 +28,21 @@
   @media (min-width: 610px) {
     width: 550px;
   }
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0;
+    width: 668px;
+  }
 }
 
 .production__title-wrapper {
   padding: 0 33px 0 34px;
   margin: 0 0 26px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px 0;
+    margin: 0 0 24px;
+  }
 }
 
 .production__title {
@@ -37,7 +51,6 @@
   padding-left: 57px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 24px;
 
   &::before {
     position: absolute;
@@ -48,21 +61,44 @@
     width: 32px;
     height: 22px;
     background: url("../../img/decor/video.svg") 0/32px 22px no-repeat;
+
+    @media (min-width: variables.$width-tablet) {
+      top: 8px;
+      left: -8px;
+    }
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 20px;
   }
 }
 
 .production__player {
   margin: 0 0 35px;
+
+  @media (min-width: variables.$width-tablet) {
+    order: -1;
+    margin: 0 0 42px;
+  }
 }
 
 .production__group-botton {
   padding: 0 33px 0 34px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 40px 46px;
+  }
 }
 
 .production__text {
   margin: 0 0 41px;
   font-size: 13px;
-  line-height: 24px;
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 0 40px;
+  }
 }
 
 .production__button {
@@ -72,5 +108,9 @@
   @media (min-width: 610px) {
     width: 334px;
     margin: 0 auto;
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    width: 584px;
   }
 }
