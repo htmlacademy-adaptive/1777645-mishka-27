@@ -3,6 +3,10 @@
 
 .catalog-products__wrapper {
   padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+  }
 }
 
 .catalog-products__list {
@@ -14,5 +18,10 @@
 
   @media (min-width: 610px) {
     grid-template-columns: repeat(2, 260px);
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    grid-template-columns: 668px;
+    row-gap: 54px;
   }
 }
