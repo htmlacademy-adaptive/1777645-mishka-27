@@ -98,6 +98,10 @@
     @media (min-width: variables.$width-tablet) {
       margin-bottom: 79px;
     }
+
+    @media (min-width: variables.$width-desktop) {
+      margin-bottom: 123px;
+    }
   }
 }
 
@@ -130,6 +134,10 @@
 
   @media (min-width: variables.$width-tablet) {
     margin-bottom: 53px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 57px;
   }
 }
 

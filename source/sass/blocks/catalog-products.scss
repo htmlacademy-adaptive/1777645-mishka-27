@@ -7,6 +7,11 @@
   @media (min-width: variables.$width-tablet) {
     padding: 0 50px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+  }
 }
 
 .catalog-products__list {
@@ -23,5 +28,10 @@
   @media (min-width: variables.$width-tablet) {
     grid-template-columns: 668px;
     row-gap: 54px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    grid-template-columns: repeat(3, 316px);
+    gap: 51px;
   }
 }
