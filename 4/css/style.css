@@ -578,6 +578,11 @@
     margin-bottom: 64px;
   }
 }
+@media (min-width: 1150px) {
+  .main-container__production {
+    margin-bottom: 105px;
+  }
+}
 
 .hero {
   display: flex;
@@ -2453,6 +2458,14 @@
     width: 668px;
   }
 }
+@media (min-width: 1150px) {
+  .production__wrapper {
+    display: grid;
+    grid-template-areas: "player title" "player button";
+    align-items: start;
+    width: 1050px;
+  }
+}
 
 .production__title-wrapper {
   padding: 0 33px 0 34px;
@@ -2462,6 +2475,13 @@
   .production__title-wrapper {
     padding: 0 50px 0;
     margin: 0 0 24px;
+  }
+}
+@media (min-width: 1150px) {
+  .production__title-wrapper {
+    grid-area: title;
+    padding: 47px 49px 0 79px;
+    margin: 0 0 0;
   }
 }
 
@@ -2488,9 +2508,23 @@
     left: -8px;
   }
 }
+@media (min-width: 1150px) {
+  .production__title::before {
+    transform: none;
+    position: static;
+    margin: 0 0 28px;
+  }
+}
 @media (min-width: 768px) {
   .production__title {
     font-size: 20px;
+  }
+}
+@media (min-width: 1150px) {
+  .production__title {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -2503,6 +2537,13 @@
     margin: 0 0 42px;
   }
 }
+@media (min-width: 1150px) {
+  .production__player {
+    grid-area: player;
+    padding: 0 0 0;
+    margin: 0 0 0;
+  }
+}
 
 .production__group-botton {
   padding: 0 33px 0 34px;
@@ -2510,6 +2551,12 @@
 @media (min-width: 768px) {
   .production__group-botton {
     padding: 0 40px 46px;
+  }
+}
+@media (min-width: 1150px) {
+  .production__group-botton {
+    grid-area: button;
+    padding: 0 57px 0 79px;
   }
 }
 
@@ -2522,6 +2569,11 @@
     font-size: 15px;
     line-height: 30px;
     margin: 0 0 40px;
+  }
+}
+@media (min-width: 1150px) {
+  .production__text {
+    margin: 0 0 51px;
   }
 }
 
@@ -2538,6 +2590,11 @@
 @media (min-width: 768px) {
   .production__button {
     width: 584px;
+  }
+}
+@media (min-width: 1150px) {
+  .production__button {
+    width: 230px;
   }
 }
 
@@ -2559,6 +2616,11 @@
   .player__poster {
     width: 668px;
     height: 455px;
+  }
+}
+@media (min-width: 1150px) {
+  .player__poster {
+    width: 683px;
   }
 }
 
