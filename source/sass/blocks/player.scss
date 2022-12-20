@@ -4,11 +4,7 @@
 
 .player {
   position: relative;
-}
-
-.player__poster {
-  display: block;
-  object-fit: cover;
+  background-color: variables.$linen;
 
   @media (min-width: 610px) {
     width: 550px;
@@ -19,6 +15,15 @@
     width: 668px;
     height: 455px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 683px;
+  }
+}
+
+.player__poster {
+  display: block;
+  object-fit: cover;
 }
 
 .player__button {

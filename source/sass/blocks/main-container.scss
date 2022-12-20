@@ -148,4 +148,8 @@
   @media (min-width: variables.$width-tablet) {
     margin-bottom: 64px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    margin-bottom: 105px;
+  }
 }
