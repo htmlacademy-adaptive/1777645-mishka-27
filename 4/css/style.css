@@ -1046,37 +1046,37 @@
   grid-area: material;
 }
 .about__item--material::before {
-  background: url("../../img/icon/material.svg") 8px 0/33px 38px no-repeat;
+  background: url("../img/icon/material.svg") 8px 0/33px 38px no-repeat;
 }
 .about__item--manually {
   grid-area: manually;
 }
 .about__item--manually::before {
-  background: url("../../img/icon/manually.svg") 3px 3px/35px 34px no-repeat;
+  background: url("../img/icon/manually.svg") 3px 3px/35px 34px no-repeat;
 }
 .about__item--price {
   grid-area: price;
 }
 .about__item--price::before {
-  background: url("../../img/icon/price.svg") 0 1px/47px 27px no-repeat;
+  background: url("../img/icon/price.svg") 0 1px/47px 27px no-repeat;
 }
 .about__item--support {
   grid-area: support;
 }
 .about__item--support::before {
-  background: url("../../img/icon/support.svg") 0 4px/55px 23px no-repeat;
+  background: url("../img/icon/support.svg") 0 4px/55px 23px no-repeat;
 }
 .about__item--like {
   grid-area: like;
 }
 .about__item--like::before {
-  background: url("../../img/icon/like.svg") 7px 6px/34px 27px no-repeat;
+  background: url("../img/icon/like.svg") 7px 6px/34px 27px no-repeat;
 }
 .about__item--gift {
   grid-area: gift;
 }
 .about__item--gift::before {
-  background: url("../../img/icon/gift.svg") 3px 2px/33px 32px no-repeat;
+  background: url("../img/icon/gift.svg") 3px 2px/33px 32px no-repeat;
 }
 
 .reviews {
@@ -2481,7 +2481,7 @@
   .production__title-wrapper {
     grid-area: title;
     padding: 47px 49px 0 79px;
-    margin: 0 0 0;
+    margin: 0 0 27px;
   }
 }
 
@@ -2556,7 +2556,7 @@
 @media (min-width: 1150px) {
   .production__group-botton {
     grid-area: button;
-    padding: 0 57px 0 79px;
+    padding: 0 57px 60px 79px;
   }
 }
 
@@ -2583,12 +2583,13 @@
 }
 @media (min-width: 610px) {
   .production__button {
-    width: 334px;
+    width: 100%;
     margin: 0 auto;
   }
 }
 @media (min-width: 768px) {
   .production__button {
+    font-size: 17px;
     width: 584px;
   }
 }
@@ -2600,28 +2601,29 @@
 
 .player {
   position: relative;
-}
-
-.player__poster {
-  display: block;
-  object-fit: cover;
+  background-color: #ececec;
 }
 @media (min-width: 610px) {
-  .player__poster {
+  .player {
     width: 550px;
     height: 317px;
   }
 }
 @media (min-width: 768px) {
-  .player__poster {
+  .player {
     width: 668px;
     height: 455px;
   }
 }
 @media (min-width: 1150px) {
-  .player__poster {
+  .player {
     width: 683px;
   }
+}
+
+.player__poster {
+  display: block;
+  object-fit: cover;
 }
 
 .player__button {
