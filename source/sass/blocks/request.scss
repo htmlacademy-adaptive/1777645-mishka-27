@@ -6,32 +6,23 @@
   flex-direction: column;
 }
 
-.request__text-wrapper {
+.request__text {
   padding: 0 30px;
   margin: 0 0 30px;
+  font-size: 13px;
 
   @media (min-width: variables.$width-tablet) {
     padding: 0 50px;
     margin: 0 0 14px;
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    width: 1050px;
-    margin: 0 auto 13px;
-  }
-}
-
-.request__text {
-  margin: 0;
-  font-size: 13px;
-
-  @media (min-width: variables.$width-tablet) {
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto 13px;
     padding: 0 175px;
+    box-sizing: border-box;
   }
 }
 
@@ -250,7 +241,7 @@
 }
 
 .request__radio {
-  &:checked + .request__mark-radio {
+  &:checked+.request__mark-radio {
     &::after {
       position: absolute;
       content: "";
@@ -261,8 +252,10 @@
       height: 16px;
       border-radius: 50%;
       background-color: variables.$moderate-aquamarine-2;
+    }
 
-      @media (min-width: variables.$width-tablet) {
+    @media (min-width: variables.$width-tablet) {
+      &::after {
         width: 20px;
         height: 20px;
       }
@@ -302,7 +295,7 @@
 }
 
 .request__checkbox {
-  &:checked + .request__mark-checkbox {
+  &:checked+.request__mark-checkbox {
     &::after {
       position: absolute;
       content: "";
@@ -312,8 +305,10 @@
       width: 26px;
       height: 26px;
       background: url("../img/icon/checkbox-on.svg") center / 26px 17px no-repeat;
+    }
 
-      @media (min-width: variables.$width-tablet) {
+    @media (min-width: variables.$width-tablet) {
+      &::after {
         width: 32px;
         height: 22px;
         background-size: 32px 22px;

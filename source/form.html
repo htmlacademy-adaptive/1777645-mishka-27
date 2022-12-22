@@ -64,9 +64,7 @@
       <section class="main-container__request request">
         <div class="request__wrapper">
           <h2 class="visually-hidden">Форма заказа.</h2>
-          <div class="request__text-wrapper">
-            <p class="request__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          </div>
+          <p class="request__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="request__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="request__group request__group--group-type">
               <p class="request__heading request__heading--type">Тип</p>
@@ -155,8 +153,9 @@
             </fieldset>
             <div class="request__group-wrapper">
               <fieldset class="request__group request__group--group-phone">
-                <p class="request__heading request__heading--phone">Тел</p>
-                <label class="visually-hidden" for="phone">Введите номер телефона.</label>
+                <label class="request__heading request__heading--phone" for="phone">Тел
+                  <span class="visually-hidden">ефон.</span>
+                </label>
                 <div class="request__group-input">
                   <input class="request__field field-entry field-entry--icon" type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                   <svg class="request__icon-input" aria-hidden="true" focusable="false" width="25" height="24" viewBox="0 0 25 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -168,8 +167,7 @@
                 </div>
               </fieldset>
               <fieldset class="request__group request__group--group-email">
-                <p class="request__heading request__heading--email">E-mail</p>
-                <label class="visually-hidden" for="email">Введите email.</label>
+                <label class="request__heading request__heading--email" for="email">E-mail</label>
                 <div class="request__group-input">
                   <input class="request__field field-entry field-entry--icon" type="text" id="email" name="email" placeholder="Ваш Email*" required>
                   <svg class="request__icon-input request__icon-input--message" aria-hidden="true" focusable="false" width="32" height="21" viewBox="0 0 32 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -179,8 +177,9 @@
               </fieldset>
             </div>
             <fieldset class="request__group request__group--additionally">
-              <p class="request__heading request__heading--additionally">Доп</p>
-              <label class="visually-hidden" for="text">Введите сообщение.</label>
+              <label class="request__heading request__heading--additionally" for="text">Доп
+                <span class="visually-hidden">олнительное пожелание.</span>
+              </label>
               <textarea class="request__field field-entry field-entry--textarea" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
             <div class="request__group-bottom">
