@@ -1,5 +1,6 @@
 @use "./global/fonts.scss";
 @use "./global/global.scss";
+@use "./global/visually-hidden.scss";
 @use "./blocks/button.scss";
 @use "./blocks/title.scss";
 @use "./blocks/subtitle.scss";
@@ -14,7 +15,6 @@
 @use "./blocks/popular.scss";
 @use "./blocks/about.scss";
 @use "./blocks/reviews.scss";
-@use "./blocks/slider.scss";
 @use "./blocks/contacts.scss";
 @use "./blocks/map.scss";
 @use "./blocks/main-footer.scss";
