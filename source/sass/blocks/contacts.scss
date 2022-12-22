@@ -13,11 +13,6 @@
       width: 47px;
       height: 81px;
       background: url("../img/decor/flag.svg") no-repeat;
-
-      @media (min-width: variables.$width-desktop) {
-        top: 62px;
-        left: 113px;
-      }
     }
   }
 
@@ -26,6 +21,11 @@
     width: 1050px;
     margin-left: auto;
     margin-right: auto;
+
+    &::after {
+      top: 62px;
+      left: 113px;
+    }
   }
 }
 

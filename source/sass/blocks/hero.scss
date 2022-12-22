@@ -133,8 +133,10 @@
       top: 23px;
       right: 36px;
       background-image: url("../img/icon/interior.svg");
+    }
 
-      @media (min-width: variables.$width-tablet) {
+    @media (min-width: variables.$width-tablet) {
+      &::after {
         top: 29px;
       }
     }
@@ -153,8 +155,10 @@
       top: 21px;
       right: 27px;
       background-image: url("../img/icon/toy.svg");
+    }
 
-      @media (min-width: variables.$width-tablet) {
+    @media (min-width: variables.$width-tablet) {
+      &::after {
         top: 32px;
         right: 33px;
       }

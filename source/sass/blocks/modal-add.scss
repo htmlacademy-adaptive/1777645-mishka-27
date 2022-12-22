@@ -105,8 +105,10 @@
       width: 82px;
       height: 52px;
       border: 2px solid variables.$moderate-aquamarine-1;
+    }
 
-      @media (min-width: variables.$width-tablet) {
+    @media (min-width: variables.$width-tablet) {
+      &::after {
         width: 112px;
       }
     }

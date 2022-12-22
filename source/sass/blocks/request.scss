@@ -241,7 +241,7 @@
 }
 
 .request__radio {
-  &:checked+.request__mark-radio {
+  &:checked + .request__mark-radio {
     &::after {
       position: absolute;
       content: "";
@@ -295,7 +295,7 @@
 }
 
 .request__checkbox {
-  &:checked+.request__mark-checkbox {
+  &:checked + .request__mark-checkbox {
     &::after {
       position: absolute;
       content: "";

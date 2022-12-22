@@ -20,13 +20,13 @@
   }
 }
 
-.site-list__item {
+.site-list__item:first-child .site-list__link {
   @media (min-width: variables.$width-tablet) {
-    &:first-child .site-list__link {
-      padding-left: 0;
-    }
+    padding-left: 0;
   }
+}
 
+.site-list__item {
   @media (min-width: variables.$width-desktop) {
     &:not(:first-child) {
       box-shadow: inset 1px 0 0 0 variables.$linen;
