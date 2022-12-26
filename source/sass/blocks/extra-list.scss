@@ -1,0 +1,35 @@
+@use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.extra-list {
+  @include mixins.list-reset;
+  font-weight: 700;
+  display: none;
+
+  @media (min-width: variables.$width-desktop) {
+    position: absolute;
+    bottom: -44px;
+    left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+}
+
+.extra-list__item:first-child .extra-list__link {
+  @media (min-width: variables.$width-desktop) {
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+.extra-list__link {
+  @include mixins.link-reset;
+  @include mixins.link-behaviour;
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 22px 31px;
+  }
+}

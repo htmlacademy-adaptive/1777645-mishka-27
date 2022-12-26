@@ -1,12 +1,27 @@
-@use "../global/mixins.scss";
 @use "../global/variables.scss";
 
 .main-header {
+  border-bottom: 1px solid variables.$linen;
+}
+
+.main-header__wrapper {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  padding: 22px 0;
-  box-shadow: 0 1px 0 0 variables.$linen;
+  min-height: 79px;
+  padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    min-height: 88px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
 }
 
 .main-header__logo {
@@ -22,14 +37,18 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: variables.$width-tablet) {
+    left: 62px;
+    transform: translateY(-47%);
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    left: 44.95%;
+    right: 50%;
+  }
 }
 
 .main-header__logo-image {
   display: block;
-}
-
-.main-nav__text-info {
-  margin: 0;
-  font-size: 15px;
-  color: variables.$dark-bluish-black;
 }

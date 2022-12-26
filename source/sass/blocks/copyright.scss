@@ -2,7 +2,6 @@
 @use "../global/variables.scss";
 
 .copyright__text {
-  margin: 0 28px 2px 1px;
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
@@ -11,7 +10,9 @@
 .copyright__link {
   @include mixins.link-reset;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 182px;
 
   &:hover .copyright__logo-icon {
     color: variables.$shamrock;
@@ -23,6 +24,5 @@
 }
 
 .copyright__logo-icon {
-  display: block;
   color: variables.$moderate-aquamarine-1;
 }

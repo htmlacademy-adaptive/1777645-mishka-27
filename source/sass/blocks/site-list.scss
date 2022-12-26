@@ -4,9 +4,50 @@
 .site-list {
   @include mixins.list-reset;
   font-weight: 700;
+
+  @media (min-width: variables.$width-tablet) {
+    position: absolute;
+    bottom: -66px;
+    left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    position: static;
+  }
+}
+
+.site-list__item:first-child .site-list__link {
+  @media (min-width: variables.$width-tablet) {
+    padding-left: 0;
+  }
+}
+
+.site-list__item {
+  @media (min-width: variables.$width-desktop) {
+    &:not(:first-child) {
+      box-shadow: inset 1px 0 0 0 variables.$linen;
+    }
+  }
 }
 
 .site-list__link {
   @include mixins.link-reset;
   @include mixins.link-behaviour;
+  display: block;
+  padding: 28px 31px 27px 76px;
+  box-shadow: inset 0 -1px 0 0 variables.$linen;
+
+  @media (min-width: variables.$width-tablet) {
+    box-shadow: none;
+    padding: 21px 18px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    font-size: 17px;
+    padding: 33px 36px 31px;
+  }
 }

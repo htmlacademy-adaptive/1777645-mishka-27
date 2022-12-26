@@ -1,0 +1,50 @@
+@use "../global/variables.scss";
+
+.main-nav__toggle {
+  width: 20px;
+  height: 14px;
+  border: none;
+
+  @media (min-width: variables.$width-tablet) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  z-index: 1;
+  background-color: variables.$light-main;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    position: static;
+    display: block;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: 1050px;
+  }
+}
+
+.main-nav__text-info {
+  display: none;
+  margin: 0;
+  font-size: 15px;
+  color: variables.$dark-bluish-black;
+
+  @media (min-width: variables.$width-tablet) {
+    display: block;
+    position: absolute;
+    bottom: -44px;
+    right: 50px;
+  }
+}

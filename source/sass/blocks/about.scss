@@ -1,7 +1,122 @@
 @use "../global/mixins.scss";
+@use "../global/variables.scss";
+
+.about {
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px;
+  }
+}
+
+.about__wrapper {
+  padding: 0 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 0 0 0 175px;
+  }
+}
+
+.about__subtitle {
+  margin: 0 0 28px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 40px;
+  }
+}
 
 .about__list {
   @include mixins.list-reset;
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-areas: "material" "price" "like" "manually" "support" "gift";
+  gap: 28px 0;
   font-weight: 700;
   line-height: 20px;
+
+  @media (min-width: variables.$width-device) {
+    grid-template-columns: repeat(2, 260px);
+    grid-template-areas: "material manually" "price support" "like gift";
+    column-gap: 10px;
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    grid-template-columns: repeat(2, 325px);
+    gap: 52px 10px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    column-gap: 25px;
+  }
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    width: 55px;
+    height: 38px;
+    margin: 0 0 17px;
+
+    @media (min-width: variables.$width-tablet) {
+      margin: 0 0 20px;
+    }
+  }
+
+  &--material {
+    grid-area: material;
+
+    &::before {
+      background: url("../img/icon/material.svg") 8px 0/33px 38px no-repeat;
+    }
+  }
+
+  &--manually {
+    grid-area: manually;
+
+    &::before {
+      background: url("../img/icon/manually.svg") 3px 3px/35px 34px no-repeat;
+    }
+  }
+
+  &--price {
+    grid-area: price;
+
+    &::before {
+      background: url("../img/icon/price.svg") 0 1px/47px 27px no-repeat;
+    }
+  }
+
+  &--support {
+    grid-area: support;
+
+    &::before {
+      background: url("../img/icon/support.svg") 0 4px/55px 23px no-repeat;
+    }
+  }
+
+  &--like {
+    grid-area: like;
+
+    &::before {
+      background: url("../img/icon/like.svg") 7px 6px/34px 27px no-repeat;
+    }
+  }
+
+  &--gift {
+    grid-area: gift;
+
+    &::before {
+      background: url("../img/icon/gift.svg") 3px 2px/33px 32px no-repeat;
+    }
+  }
 }

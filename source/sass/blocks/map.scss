@@ -1,20 +1,27 @@
+@use "../global/variables.scss";
+
 .map {
   display: grid;
   grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .map__map-image {
-  display: block;
-  height: 454px;
-  object-fit: cover;
   grid-area: 1/1/-1/-1;
-  justify-self: center;
+
+  @media (min-width: variables.$width-tablet) {
+    height: 457px;
+  }
 }
 
 .map__google {
-  height: 454px;
   width: 100%;
   border: none;
   grid-area: 1/1/-1/-1;
+
+  @media (min-width: variables.$width-tablet) {
+    height: 100%;
+  }
 }

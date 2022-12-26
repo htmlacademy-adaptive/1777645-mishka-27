@@ -12,10 +12,31 @@
   &:active .product__group-info {
     box-shadow: variables.$shadow-border, variables.$box-shadow-1;
   }
+
+  @media (min-width: variables.$width-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 334px);
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .product__image {
   display: block;
+  object-fit: cover;
+
+  @media (min-width: variables.$width-tablet) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 315px;
+    height: 462px;
+  }
 }
 
 .product__link {
@@ -23,34 +44,81 @@
 }
 
 .product__group-info {
-  padding: 0 27px 0 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 28px 27px 26px 28px;
   box-shadow: inset 0 0 0 1px variables.$linen;
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 28px 33px 25px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 28px 33px 25px 28px;
+  }
 }
 
 .product__text-group {
-  padding: 28px 0 18px;
+  margin: 0 0 18px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0;
+    padding: 0 26px 0 0;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    padding: 0 13px 0 0;
+    margin: 0 0 12px;
+  }
 }
 
-.product__title-product {
+.product__title {
   margin: 0 0 5px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media (min-width: variables.$width-tablet) {
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    margin: 0 0 5px;
+  }
 }
 
 .product__parameters {
   margin: 0;
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 15px;
+  }
 }
 
 .product__button-group {
-  padding: 24px 0 26px;
+  padding: 24px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   box-shadow: inset 0 1px 0 0 variables.$linen;
+
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 25px 0 0;
+  }
 }
 
 .product__price {
   font-size: 15px;
+
+  @media (min-width: variables.$width-tablet) {
+    font-size: 17px;
+  }
 }
 
 .product__button {
