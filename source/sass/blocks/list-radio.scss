@@ -12,25 +12,23 @@
   }
 }
 
-.list-radio__input-radio {
-  &:checked + .list-radio__mark-radio {
-    &::after {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: variables.$moderate-aquamarine-2;
-    }
+.list-radio__input-radio:checked + .list-radio__mark-radio {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: variables.$moderate-aquamarine-2;
+  }
 
-    @media (min-width: variables.$width-tablet) {
-      &::after {
-        width: 20px;
-        height: 20px;
-      }
+  @media (min-width: variables.$width-tablet) {
+    &::after {
+      width: 20px;
+      height: 20px;
     }
   }
 }

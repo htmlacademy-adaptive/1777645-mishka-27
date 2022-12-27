@@ -36,14 +36,6 @@
   display: block;
   padding: 28px 31px 27px 76px;
 
-  &:hover .user-list__icon {
-    color: variables.$moderate-aquamarine-1;
-  }
-
-  &:active .user-list__icon {
-    color: rgba(variables.$moderate-aquamarine-1, 0.3);
-  }
-
   @media (min-width: variables.$width-tablet) {
     padding: 33px 36px 31px;
 
@@ -55,6 +47,14 @@
       padding-left: 84px;
     }
   }
+}
+
+.user-list__link:hover .user-list__icon {
+  color: variables.$moderate-aquamarine-1;
+}
+
+.user-list__link:active .user-list__icon {
+  color: rgba(variables.$moderate-aquamarine-1, 0.3);
 }
 
 .user-list__icon {
