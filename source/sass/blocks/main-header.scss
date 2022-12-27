@@ -1,34 +1,22 @@
 @use "../global/variables.scss";
 
 .main-header {
+  min-height: 79px;
   border-bottom: 1px solid variables.$linen;
+
+  @media (max-width: variables.$width-mobile) {
+    position: relative;
+  }
 }
 
 .main-header__wrapper {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: 79px;
-  padding: 0 30px;
-
-  @media (min-width: variables.$width-tablet) {
-    min-height: 88px;
-    padding: 0 50px;
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    width: 1050px;
-    margin: 0 auto;
-    justify-content: flex-start;
-  }
+  flex-direction: column;
 }
 
 .main-header__logo {
-  position: absolute;
-  left: calc(50% - 1px);
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin: 22px auto;
 
   &:hover {
     opacity: 0.6;
@@ -36,16 +24,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: variables.$width-tablet) {
-    left: 62px;
-    transform: translateY(-47%);
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    left: 44.95%;
-    right: 50%;
   }
 }
 

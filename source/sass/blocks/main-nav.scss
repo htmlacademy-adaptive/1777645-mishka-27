@@ -1,44 +1,74 @@
 @use "../global/variables.scss";
 
+.main-nav {
+  @media (min-width: variables.$width-tablet) {
+    position: relative;
+  }
+}
+
 .main-nav--closed .main-nav__toggle {
-  &::before {
-    position: absolute;
-    content: "";
-    top: calc(50% - 7px);
-    left: calc(50% - 10px);
-    width: 20px;
-    height: 2px;
-    background-color: currentColor;
-    box-shadow: 0 6px 0 0 currentColor, 0 12px 0 0 currentColor;
+  @media (max-width: variables.$width-mobile) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: calc(50% - 7px);
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 2px;
+      background-color: currentColor;
+      box-shadow: 0 6px 0 0 currentColor, 0 12px 0 0 currentColor;
+    }
+  }
+}
+
+.main-nav--closed .main-nav__wrapper {
+  @media (max-width: variables.$width-mobile) {
+    display: none;
   }
 }
 
 .main-nav--opened .main-nav__toggle {
-  &::before,
-  &::after {
+  @media (max-width: variables.$width-mobile) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: calc(50% - 13px);
+      width: 27px;
+      height: 2px;
+      background-color: currentColor;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: variables.$width-mobile) {
     position: absolute;
-    content: "";
-    top: 50%;
-    left: calc(50% - 13px);
-    width: 27px;
-    height: 2px;
-    background-color: currentColor;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
+    display: block;
+    top: 101%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: variables.$light-main;
+    box-shadow: 0 1px 0 0 #ececec;
   }
 }
 
 .main-nav__toggle {
   position: absolute;
   padding: 24px 24px;
-  top: 19%;
+  top: 50%;
   right: 17px;
+  transform: translateY(-50%);
   width: 20px;
   height: 14px;
   border: none;
@@ -57,31 +87,6 @@
 
   @media (min-width: variables.$width-tablet) {
     display: none;
-  }
-}
-
-.main-nav__wrapper {
-  position: absolute;
-  width: 100%;
-  top: 80px;
-  left: 0;
-  z-index: 1;
-  background-color: variables.$light-main;
-  display: none;
-
-  &--opened {
-    display: block;
-  }
-
-  @media (min-width: variables.$width-tablet) {
-    position: static;
-    display: block;
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    display: flex;
-    justify-content: space-between;
-    width: 1050px;
   }
 }
 
