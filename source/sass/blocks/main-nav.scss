@@ -1,9 +1,59 @@
 @use "../global/variables.scss";
 
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 7px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    box-shadow: 0 6px 0 0 currentColor, 0 12px 0 0 currentColor;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: calc(50% - 13px);
+    width: 27px;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__toggle {
+  position: absolute;
+  padding: 24px 24px;
+  top: 19%;
+  right: 17px;
   width: 20px;
   height: 14px;
   border: none;
+  background-color: transparent;
+  color: variables.$black-brown;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: variables.$moderate-aquamarine-1;
+  }
+
+  &:active {
+    color: rgba(variables.$moderate-aquamarine-1, 0.3);
+  }
 
   @media (min-width: variables.$width-tablet) {
     display: none;
