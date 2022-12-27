@@ -12,11 +12,21 @@
 .main-header__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: variables.$width-tablet) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
 }
 
 .main-header__logo {
-  display: block;
-  margin: 22px auto;
+  @media (max-width: variables.$width-mobile) {
+    display: block;
+    margin: 22px auto;
+  }
 
   &:hover {
     opacity: 0.6;

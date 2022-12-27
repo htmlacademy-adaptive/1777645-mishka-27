@@ -9,18 +9,14 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    width: 100%;
+    transform: translateX(36px);
   }
 }
 
 .user-list__item {
   @media (min-width: variables.$width-tablet) {
     box-shadow: inset 1px 0 0 0 variables.$linen;
-  }
-}
-
-.user-list__item:last-child .user-list__link {
-  @media (min-width: variables.$width-tablet) {
-    padding-right: 0;
   }
 }
 
@@ -41,7 +37,7 @@
   }
 
   @media (min-width: variables.$width-tablet) {
-    box-shadow: none;
+    box-shadow: inset 1px 0 0 0 variables.$linen;
     padding: 33px 36px 31px;
 
     &--search {
