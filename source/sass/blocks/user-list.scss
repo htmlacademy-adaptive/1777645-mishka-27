@@ -12,9 +12,18 @@
     width: 100%;
     transform: translateX(36px);
   }
+
+  @media (min-width: variables.$width-desktop) {
+    align-content: flex-start;
+    max-width: 455px;
+  }
 }
 
 .user-list__item {
+  @media (max-width: variables.$width-mobile) {
+    box-shadow: inset 0 1px 0 0 variables.$linen;
+  }
+
   @media (min-width: variables.$width-tablet) {
     box-shadow: inset 1px 0 0 0 variables.$linen;
   }
@@ -26,7 +35,6 @@
   position: relative;
   display: block;
   padding: 28px 31px 27px 76px;
-  box-shadow: inset 0 1px 0 0 variables.$linen;
 
   &:hover .user-list__icon {
     color: variables.$moderate-aquamarine-1;
@@ -37,7 +45,6 @@
   }
 
   @media (min-width: variables.$width-tablet) {
-    box-shadow: inset 1px 0 0 0 variables.$linen;
     padding: 33px 36px 31px;
 
     &--search {

@@ -1,5 +1,9 @@
 @use "../global/variables.scss";
 
+.main-nav {
+  width: 100%;
+}
+
 .main-nav--closed .main-nav__toggle {
   @media (max-width: variables.$width-mobile) {
     &::before {
@@ -62,14 +66,9 @@
 }
 
 .main-nav--nojs .main-nav__wrapper {
-  position: static;
-  display: block;
-}
-
-.main-nav__wrapper {
-  @media (min-width: variables.$width-tablet) {
-    display: flex;
-    justify-content: flex-end;
+  @media (max-width: variables.$width-mobile) {
+    position: static;
+    display: block;
   }
 }
 
@@ -97,6 +96,17 @@
 
   @media (min-width: variables.$width-tablet) {
     display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: variables.$width-tablet) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    justify-content: space-between;
   }
 }
 

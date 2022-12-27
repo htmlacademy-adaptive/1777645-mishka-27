@@ -20,12 +20,22 @@
     align-items: center;
     padding: 0 50px;
   }
+
+  @media (min-width: variables.$width-desktop) {
+    width: 1050px;
+    margin: 0 auto;
+  }
 }
 
 .main-header__logo {
   @media (max-width: variables.$width-mobile) {
     display: block;
     margin: 22px auto;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    position: absolute;
+    left: calc(43% + 5px);
   }
 
   &:hover {

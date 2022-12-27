@@ -8,28 +8,23 @@
 
   @media (min-width: variables.$width-desktop) {
     position: absolute;
-    bottom: -44px;
+    top: 100%;
     left: 50px;
+    right: 40%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     font-size: 15px;
-  }
-}
-
-.extra-list__item:first-child .extra-list__link {
-  @media (min-width: variables.$width-desktop) {
-    &:first-child {
-      padding-left: 0;
-    }
+    transform: translateX(-30px);
   }
 }
 
 .extra-list__link {
   @include mixins.link-reset;
   @include mixins.link-behaviour;
+  display: block;
 
   @media (min-width: variables.$width-desktop) {
-    padding: 22px 31px;
+    padding: 20px 31px;
   }
 }
