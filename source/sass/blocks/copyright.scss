@@ -15,7 +15,12 @@
   width: 182px;
 }
 
-.copyright__link:hover .copyright__logo-icon {
+.copyright__link:focus-visible {
+  outline: solid 2px variables.$shamrock;
+}
+
+.copyright__link:hover .copyright__logo-icon,
+.copyright__link:focus-visible .copyright__logo-icon {
   color: variables.$shamrock;
 }
 

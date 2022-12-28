@@ -78,6 +78,7 @@
 
   @media (min-width: variables.$width-tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: variables.$width-desktop) {
@@ -87,19 +88,25 @@
 }
 
 .hero__item {
+  display: flex;
+  flex-direction: column;
+  min-height: 103px;
+
   @media (min-width: variables.$width-tablet) {
-    width: 100%;
+    width: 50%;
+    min-height: 119px;
   }
 }
 
 .hero__link {
   position: relative;
   display: block;
+  flex-grow: 1;
   font-weight: 700;
   font-size: 19px;
   text-decoration: none;
   color: variables.$light-main;
-  padding: 24px 30px 31px;
+  padding: 24px 95px 31px 30px;
   background-color: variables.$moderate-aquamarine-1;
 
   &::after {
@@ -110,8 +117,10 @@
     opacity: 0.5;
   }
 
-  &:hover {
-    padding-bottom: 36px;
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    padding-bottom: 38px;
     margin-top: -5px;
     background-color: variables.$moderate-aquamarine-4;
 
@@ -124,6 +133,12 @@
     &::after {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: variables.$width-tablet) {
+    padding: 26px 100px 33px 36px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &--interior {
@@ -163,11 +178,5 @@
         right: 33px;
       }
     }
-  }
-
-  @media (min-width: variables.$width-tablet) {
-    padding: 26px 36px 33px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }

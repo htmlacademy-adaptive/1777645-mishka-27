@@ -151,9 +151,17 @@
   }
 }
 
-.request__group-input:hover .request__icon-input,
-.request__group-input:focus-within .request__icon-input {
+.request__field:not(:placeholder-shown) + .request__icon-input {
   color: variables.$moderate-aquamarine-2;
+}
+
+.request__field:hover:not(:disabled) + .request__icon-input,
+.request__field:focus-visible + .request__icon-input {
+  color: variables.$moderate-aquamarine-2;
+}
+
+.request__field:invalid:not(:placeholder-shown) + .request__icon-input {
+  color: variables.$error;
 }
 
 .request__group-bottom {

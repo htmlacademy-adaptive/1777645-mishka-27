@@ -85,9 +85,14 @@
   color: variables.$black-brown;
   cursor: pointer;
 
-  &:hover,
+  &:hover {
+    color: variables.$moderate-aquamarine-1;
+  }
+
   &:focus-visible {
     color: variables.$moderate-aquamarine-1;
+    box-shadow: inset 0 0 0 2px variables.$shamrock;
+    outline: none;
   }
 
   &:active {

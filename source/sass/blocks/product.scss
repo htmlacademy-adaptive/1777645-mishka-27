@@ -41,6 +41,11 @@
 
 .product__link {
   @include mixins.link-reset;
+
+  &:focus-visible {
+    color: variables.$shamrock;
+    outline: 2px solid variables.$shamrock;
+  }
 }
 
 .product__group-info {
@@ -126,9 +131,19 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid variables.$shamrock;
+    outline-offset: 3px;
+    border-radius: 50%;
+  }
 }
 
 .product__button:hover .product__button-icon {
+  color: variables.$moderate-aquamarine-1;
+}
+
+.product__button:focus-visible .product__button-icon {
   color: variables.$moderate-aquamarine-1;
 }
 

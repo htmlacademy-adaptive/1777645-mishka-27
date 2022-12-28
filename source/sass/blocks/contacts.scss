@@ -114,6 +114,12 @@
     border-color: variables.$shamrock;
   }
 
+  &:focus-visible {
+    color: variables.$shamrock;
+    border-color: variables.$shamrock;
+    outline: none;
+  }
+
   &:active {
     color: variables.$shamrock;
     border-color: rgba(variables.$shamrock, 0.1);
