@@ -29,6 +29,11 @@
     color: variables.$shamrock;
   }
 
+  &:focus-visible {
+    box-shadow: 0 0 0 2px variables.$shamrock;
+    outline: none;
+  }
+
   &:active {
     color: rgba(variables.$shamrock, 0.3);
   }

@@ -140,18 +140,23 @@
     margin-left: -1px;
   }
 
-  &:hover .reviews__icon-arrow {
-    opacity: 0.6;
-  }
-
-  &:active .reviews__icon-arrow {
-    opacity: 0.3;
-  }
-
   @media (min-width: variables.$width-tablet) {
     box-shadow: none;
     padding: 10px 19px;
   }
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px variables.$shamrock;
+    outline: none;
+  }
+}
+
+.reviews__arrow-button:hover .reviews__icon-arrow {
+  opacity: 0.6;
+}
+
+.reviews__arrow-button:active .reviews__icon-arrow {
+  opacity: 0.3;
 }
 
 .reviews__write {

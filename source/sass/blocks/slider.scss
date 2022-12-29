@@ -1,8 +1,0 @@
-@use "../global/mixins.scss";
-
-.slider__item {
-  &--next,
-  &--prev {
-    @include mixins.visually-hidden;
-  }
-}

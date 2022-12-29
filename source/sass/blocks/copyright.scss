@@ -13,14 +13,19 @@
   justify-content: space-between;
   align-items: center;
   width: 182px;
+}
 
-  &:hover .copyright__logo-icon {
-    color: variables.$shamrock;
-  }
+.copyright__link:focus-visible {
+  outline: solid 2px variables.$shamrock;
+}
 
-  &:active .copyright__logo-icon {
-    color: rgba(variables.$shamrock, 0.3);
-  }
+.copyright__link:hover .copyright__logo-icon,
+.copyright__link:focus-visible .copyright__logo-icon {
+  color: variables.$shamrock;
+}
+
+.copyright__link:active .copyright__logo-icon {
+  color: rgba(variables.$shamrock, 0.3);
 }
 
 .copyright__logo-icon {

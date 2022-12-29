@@ -34,10 +34,6 @@
       padding: 50px 50px;
       margin: 0;
     }
-
-    @media (min-width: variables.$width-desktop) {
-      padding: 48px 50px 52px;
-    }
   }
 
   &--group-initials {
@@ -74,11 +70,6 @@
       padding: 50px 50px;
       margin: 0 0 3px;
     }
-
-    @media (min-width: variables.$width-desktop) {
-      padding-bottom: 49px;
-      margin: 0;
-    }
   }
 
   @media (min-width: variables.$width-tablet) {
@@ -100,6 +91,11 @@
 
     &--group-color {
       padding-right: 0;
+    }
+
+    &--additionally {
+      padding-bottom: 49px;
+      margin-bottom: 0;
     }
   }
 }

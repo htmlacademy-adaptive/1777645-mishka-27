@@ -1,51 +1,54 @@
 @use "../global/variables.scss";
 
 .main-header {
+  min-height: 79px;
   border-bottom: 1px solid variables.$linen;
+
+  @media (max-width: variables.$width-mobile) {
+    position: relative;
+  }
 }
 
 .main-header__wrapper {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: 79px;
-  padding: 0 30px;
+  flex-direction: column;
 
   @media (min-width: variables.$width-tablet) {
-    min-height: 88px;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 50px;
   }
 
   @media (min-width: variables.$width-desktop) {
     width: 1050px;
     margin: 0 auto;
-    justify-content: flex-start;
   }
 }
 
 .main-header__logo {
-  position: absolute;
-  left: calc(50% - 1px);
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @media (max-width: variables.$width-mobile) {
+    display: block;
+    margin: 22px auto;
+  }
+
+  @media (min-width: variables.$width-desktop) {
+    position: absolute;
+    left: calc(43% + 5px);
+  }
 
   &:hover {
     opacity: 0.6;
   }
 
+  &:focus-visible {
+    box-shadow: 0 0 0 2px variables.$shamrock;
+    outline: none;
+  }
+
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: variables.$width-tablet) {
-    left: 62px;
-    transform: translateY(-47%);
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    left: 44.95%;
-    right: 50%;
   }
 }
 

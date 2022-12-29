@@ -120,11 +120,6 @@
 .request__group-input {
   position: relative;
   width: 100%;
-
-  &:hover .request__icon-input,
-  &:focus .request__icon-input {
-    color: variables.$moderate-aquamarine-2;
-  }
 }
 
 .request__icon-input {
@@ -133,6 +128,7 @@
   right: 7px;
   transform: translateY(-50%);
   color: rgba(variables.$dark-main, 0.2);
+  pointer-events: none;
 
   @media (min-width: variables.$width-tablet) {
     right: 26px;
@@ -153,6 +149,19 @@
       right: 3px;
     }
   }
+}
+
+.request__field:not(:placeholder-shown) + .request__icon-input {
+  color: variables.$moderate-aquamarine-2;
+}
+
+.request__field:hover:not(:disabled) + .request__icon-input,
+.request__field:focus-visible + .request__icon-input {
+  color: variables.$moderate-aquamarine-2;
+}
+
+.request__field:invalid:not(:placeholder-shown) + .request__icon-input {
+  color: variables.$error;
 }
 
 .request__group-bottom {
