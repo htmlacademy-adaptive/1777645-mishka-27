@@ -43,7 +43,11 @@
 
   @media (min-width: variables.$width-tablet) {
     padding: 84px 50px 48px;
-    background: url("../img/background-review.jpg") left/contain no-repeat;
+    background: url("../img/background/review@1x.jpg") left/contain no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/review@2x.jpg");
+    }
   }
 
   @media (min-width: variables.$width-desktop) {
