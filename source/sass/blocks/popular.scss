@@ -156,10 +156,14 @@
 
 .popular__image {
   display: block;
-  max-width: 334px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 26px;
+  object-fit: cover;
+
+  @media (max-width: variables.$width-mobile) {
+    max-width: 334px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 26px;
+  }
 
   @media (min-width: variables.$width-tablet) {
     margin: 0;
@@ -169,8 +173,6 @@
   }
 
   @media (min-width: variables.$width-desktop) {
-    max-width: 525px;
-    height: 636px;
     z-index: -1;
   }
 }
