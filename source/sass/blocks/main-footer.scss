@@ -30,8 +30,8 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px variables.$shamrock;
-    outline: none;
+    outline: 2px solid variables.$shamrock;
+    outline-offset: 4px;
   }
 
   &:active {

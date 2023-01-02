@@ -27,16 +27,6 @@
 .product__image {
   display: block;
   object-fit: cover;
-
-  @media (min-width: variables.$width-tablet) {
-    width: 334px;
-    height: 334px;
-  }
-
-  @media (min-width: variables.$width-desktop) {
-    width: 315px;
-    height: 462px;
-  }
 }
 
 .product__link {

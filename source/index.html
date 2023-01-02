@@ -4,6 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+    <link rel="manifest" href="./manifest.webmanifest">
     <link href="./css/style.css" rel="stylesheet">
     <title>Интернет магазин: Мишка</title>
   </head>
@@ -12,7 +16,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
-          <img class="main-header__logo-image" src="./img/logo/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="./img/logo/logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="./img/logo/logo-tablet.svg" width="113" height="46">
+            <img class="main-header__logo-image" src="./img/logo/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -100,7 +108,11 @@
                 <dd class="popular__definition">15 см</dd>
               </div>
             </dl>
-            <img class="popular__image" src="./img/products/popular-product.jpg" width="260" height="315" alt="Три корзинки, вложенные одна в одну.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="./img/products/popular-product-desktop@1x.jpg 1x, ./img/products/popular-product-desktop@2x.jpg 2x" width="525" height="636">
+              <source media="(min-width: 768px)" srcset="./img/products/popular-product-tablet@1x.jpg 1x, ./img/products/popular-product-tablet@2x.jpg 2x" width="334" height="404">
+              <img class="popular__image" src="./img/products/popular-product-mobile@1x.jpg" srcset="./img/products/popular-product-mobile@2x.jpg 2x" width="260" height="315" alt="Три корзинки, вложенные одна в одну.">
+            </picture>
             <p class="popular__price">Цена: 990 руб.</p>
             <button class="popular__button button button--tag-button button--spacing">Заказать</button>
           </div>
@@ -180,7 +192,10 @@
             </dl>
           </div>
           <div class="contacts__map map">
-            <img class="map__map-image" src="./img/map/map-mobile.png" width="320" height="454" alt="Ардес магазина по адресу г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/map/map-tablet@1x.png 1x, ./img/map/map-tablet@2x.png 2x" width="768" height="457">
+              <img class="map__map-image" src="./img/map/map-mobile@1x.png" srcset="./img/map/map-mobile@2x.png 2x" width="320" height="454" alt="Ардес магазина по адресу г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101.">
+            </picture>
             <iframe class="map__google map__google--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1669648036062!5m2!1sru!2sby" width="320" height="454" allowfullscreen title="Ардес магазина по адресу г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101.">
             </iframe>
           </div>

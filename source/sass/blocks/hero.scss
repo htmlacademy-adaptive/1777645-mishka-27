@@ -5,10 +5,21 @@
   display: flex;
   flex-direction: column;
   min-height: 488px;
-  background: variables.$white-snow url("../img/background-hero.jpg") center top -17px/contain no-repeat;
+  background: variables.$white-snow url("../img/background/hero-mobile@1x.jpg") center top -17px no-repeat;
+  background-size: auto 373px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/hero-mobile@2x.jpg");
+  }
 
   @media (min-width: variables.$width-tablet) {
     min-height: 745px;
+    background: variables.$white-snow url("../img/background/hero-tablet@1x.jpg") center no-repeat;
+    background-size: auto 746px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/hero-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: variables.$width-desktop) {
@@ -30,16 +41,16 @@
 }
 
 .hero__title {
-  padding: 72px 0 120px;
+  padding: 72px 0;
   text-align: center;
 
   @media (min-width: variables.$width-tablet) {
-    padding: 155px 0 371px;
+    padding: 155px 0;
   }
 
   @media (min-width: variables.$width-desktop) {
     width: 700px;
-    padding: 157px 0 355px;
+    padding: 157px 0;
     margin: 0 auto;
   }
 }
