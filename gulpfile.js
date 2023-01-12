@@ -6,6 +6,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -34,10 +35,18 @@ const html = () => {
 
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
+}
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 // Server
