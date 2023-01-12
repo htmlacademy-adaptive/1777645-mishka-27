@@ -9,6 +9,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
+import del from 'del';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -94,6 +95,12 @@ const copy = (done) => {
     .pipe(gulp.dest('build'))
   done();
 }
+
+// Clean
+
+const clean = () => {
+  return del('build');
+};
 
 // Server
 
