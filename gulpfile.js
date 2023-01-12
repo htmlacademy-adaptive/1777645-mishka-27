@@ -54,6 +54,16 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+//WebP
+
+const createWebp = () => {
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/background/*', '!source/img/favicons/*', '!source/img/player/*'])
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
 // Server
 
 const server = (done) => {
