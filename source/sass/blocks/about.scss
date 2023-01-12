@@ -76,7 +76,7 @@
     grid-area: material;
 
     &::before {
-      background: url("../img/icon/material.svg") 8px 0/33px 38px no-repeat;
+      background: url("../img/sprite.svg#material") 8px 0/33px 38px no-repeat;
     }
   }
 
@@ -84,7 +84,7 @@
     grid-area: manually;
 
     &::before {
-      background: url("../img/icon/manually.svg") 3px 3px/35px 34px no-repeat;
+      background: url("../img/sprite.svg#manually") 3px 3px/35px 34px no-repeat;
     }
   }
 
@@ -92,7 +92,7 @@
     grid-area: price;
 
     &::before {
-      background: url("../img/icon/price.svg") 0 1px/47px 27px no-repeat;
+      background: url("../img/sprite.svg#price") 0 1px/47px 27px no-repeat;
     }
   }
 
@@ -100,7 +100,7 @@
     grid-area: support;
 
     &::before {
-      background: url("../img/icon/support.svg") 0 4px/55px 23px no-repeat;
+      background: url("../img/sprite.svg#support") 0 4px/55px 23px no-repeat;
     }
   }
 
@@ -108,7 +108,7 @@
     grid-area: like;
 
     &::before {
-      background: url("../img/icon/like.svg") 7px 6px/34px 27px no-repeat;
+      background: url("../img/sprite.svg#like") 7px 6px/34px 27px no-repeat;
     }
   }
 
@@ -116,7 +116,7 @@
     grid-area: gift;
 
     &::before {
-      background: url("../img/icon/gift.svg") 3px 2px/33px 32px no-repeat;
+      background: url("../img/sprite.svg#gift") 3px 2px/33px 32px no-repeat;
     }
   }
 }
