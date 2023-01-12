@@ -4,6 +4,7 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -20,6 +21,14 @@ export const styles = () => {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Server
