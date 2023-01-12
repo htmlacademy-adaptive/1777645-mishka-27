@@ -5,6 +5,7 @@ import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -29,6 +30,14 @@ const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+export const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
 }
 
 // Server
