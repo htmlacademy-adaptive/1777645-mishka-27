@@ -1,0 +1,1 @@
+const navMain=document.querySelector(".main-nav"),navToggle=document.querySelector(".main-nav__toggle");navMain.classList.remove("main-nav--nojs"),navToggle.addEventListener("click",(function(){navMain.classList.contains("main-nav--closed")?navMain.classList.replace("main-nav--closed","main-nav--opened"):navMain.classList.replace("main-nav--opened","main-nav--closed")}));
