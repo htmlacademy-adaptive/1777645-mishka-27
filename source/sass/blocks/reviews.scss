@@ -48,6 +48,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/review@2x.jpg");
+      /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
       background-image: url("../img/background/review@2x.webp");
     }
   }
