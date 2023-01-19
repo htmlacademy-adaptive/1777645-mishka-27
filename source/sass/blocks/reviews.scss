@@ -44,9 +44,12 @@
   @media (min-width: variables.$width-tablet) {
     padding: 84px 50px 48px;
     background: url("../img/background/review@1x.jpg") left/contain no-repeat;
+    background-image: url("../img/background/review@1x.webp");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/review@2x.jpg");
+      /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+      background-image: url("../img/background/review@2x.webp");
     }
   }
 

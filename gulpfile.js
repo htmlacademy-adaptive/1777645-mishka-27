@@ -60,7 +60,7 @@ const copyImages = () => {
 //WebP
 
 const createWebp = () => {
-  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/background/*', '!source/img/favicons/*', '!source/img/player/*'])
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*', '!source/img/player/*'])
     .pipe(squoosh({
       webp: {}
     }))
