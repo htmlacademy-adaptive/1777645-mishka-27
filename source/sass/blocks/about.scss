@@ -32,16 +32,16 @@
 
 .about__list {
   @include mixins.list-reset;
-  display: grid;
-  grid-template-columns: 260px;
-  grid-template-areas: "material" "price" "like" "manually" "support" "gift";
+  display: flex;
+  flex-direction: column;
+  width: 260px;
   gap: 28px 0;
   font-weight: 700;
   line-height: 20px;
 
   @media (min-width: 570px) {
+    display: grid;
     grid-template-columns: repeat(2, 260px);
-    grid-template-areas: "material manually" "price support" "like gift";
     column-gap: 10px;
   }
 
@@ -73,50 +73,50 @@
   }
 
   &--material {
-    grid-area: material;
-
     &::before {
       background: url("../img/sprite.svg#material") 8px 0/33px 38px no-repeat;
     }
   }
 
   &--manually {
-    grid-area: manually;
-
     &::before {
       background: url("../img/sprite.svg#manually") 3px 3px/35px 34px no-repeat;
+    }
+
+    @media (max-width: 569px) {
+      order: 1;
     }
   }
 
   &--price {
-    grid-area: price;
-
     &::before {
       background: url("../img/sprite.svg#price") 0 1px/47px 27px no-repeat;
     }
   }
 
   &--support {
-    grid-area: support;
-
     &::before {
       background: url("../img/sprite.svg#support") 0 4px/55px 23px no-repeat;
+    }
+
+    @media (max-width: 569px) {
+      order: 2;
     }
   }
 
   &--like {
-    grid-area: like;
-
     &::before {
       background: url("../img/sprite.svg#like") 7px 6px/34px 27px no-repeat;
     }
   }
 
   &--gift {
-    grid-area: gift;
-
     &::before {
       background: url("../img/sprite.svg#gift") 3px 2px/33px 32px no-repeat;
+    }
+
+    @media (max-width: 569px) {
+      order: 3;
     }
   }
 }
