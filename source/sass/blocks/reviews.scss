@@ -62,6 +62,7 @@
   margin: 0 0 14px;
 
   @media (min-width: variables.$width-tablet) {
+    max-width: 70%;
     margin: 0 0 38px;
   }
 
