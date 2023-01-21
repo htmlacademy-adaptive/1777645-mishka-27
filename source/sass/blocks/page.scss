@@ -11,4 +11,6 @@
   min-height: 100%;
   margin: 0;
   color: variables.$dark-main;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
