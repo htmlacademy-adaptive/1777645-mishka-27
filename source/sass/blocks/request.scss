@@ -190,6 +190,7 @@
   color: variables.$dark-bluish-black;
 
   @media (min-width: variables.$width-tablet) {
+    max-width: 60%;
     margin: 0;
     font-size: 17px;
     line-height: 30px;
